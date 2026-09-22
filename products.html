@@ -1,19 +1,24 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-    <link rel="stylesheet" href="public/css/tailwind.css">
     <title>فروشگاه زعفران و زرشک | سوغات قائنات</title>
     <!-- Required meta tags -->
     <base href="./">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="icon" type="image/x-icon" href="public/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="public/images/favicon.png">
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="public/css/bootstrap-rtl.css">
     <link rel="stylesheet" href="public/css/slick.css">
     <link rel="stylesheet" href="public/css/slick-theme.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/flipTimer.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/redesign.css">
+    <link rel="stylesheet" href="public/css/storefront-shell.css">
+    <link rel="stylesheet" href="public/css/ecommerce.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
           integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -165,26 +170,26 @@
                     var price_total = parseInt(value['price_total']).toLocaleString();
                     outpot +=
                         `
-                        <li class="w-full md:w-1/3 col-lg-3 p-1">
-                            <a href="product/index/${value['id']}" class="d-block w-full">
-                                <div class="card justify-between w-full h-full">
+                        <li class="col-12 col-md-4 col-lg-3 p-1">
+                            <a href="product/index/${value['id']}" class="d-block w-100">
+                                <div class="card justify-content-between w-100 h-100">
                                     <div class="right">
                                         <img class="card-img-top mb-2" src="public/images/products/${value['id']}/thumb_product.jpg"
                                              alt="Card image cap">
                                         <div class="card-body1 p-2">
-                                            <div class="stars relative">
-                                                <span class="score text-sm font-weight-bold absolute">${value['point']} از 5</span>
-                                                <div class="gray relative mr-auto">
-                                                    <div class="red absolute" style="width: ${value['pointPercent']}%"></div>
+                                            <div class="stars position-relative">
+                                                <span class="score font-sm font-weight-bold position-absolute">${value['point']} از 5</span>
+                                                <div class="gray position-relative mr-auto">
+                                                    <div class="red position-absolute" style="width: ${value['pointPercent']}%"></div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="left pb-2">
-                                        <div class="card-body2 p-2 h-full flex flex-column">
+                                        <div class="card-body2 p-2 h-100 d-flex flex-column">
                                             <p class="title font-weight-bold text-right mt-3">${value['title']}</p>
                                             <div class="description">${value['introduction']}</div>
-                                            <div class="price_shop_product flex justify-between items-center mt-auto">
+                                            <div class="price_shop_product d-flex justify-content-between align-items-center mt-auto">
                                                 <div class="price_product">
                                                     <p class="price_red p-0 mb-2">${price} تومان</p>
                                                     <p class="price_green p-0 m-0">${price_total} تومان</p>
