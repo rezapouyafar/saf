@@ -12,9 +12,6 @@
     <link rel="stylesheet" href="public/css/slick.css">
     <link rel="stylesheet" href="public/css/slick-theme.css">
     <link rel="stylesheet" href="public/css/flipTimer.css">
-    <link rel="stylesheet" href="public/css/style.css">
-    <link rel="stylesheet" href="public/css/redesign.css">
-    <link rel="stylesheet" href="public/css/storefront-shell.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
           integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -31,10 +28,10 @@
     <script src="public/js/frotel/city.js"></script>
     <script src="public/js/script.js"></script>
 </head>
-<body>
+<body class="min-h-screen bg-stone-50 text-stone-800 antialiased">
 <!-- HEADER -->
 <header class="site-header storefront-shell-header">
-    <div class="wrap nav-row">
+    <div class="wrap nav-row flex flex-wrap -mx-2">
         <a class="brand" href="index.html">
             <img class="brand-mark" src="public/images/logo.png" alt="نشان سوغات قاینات">
             <span>سوغات قاینات</span>
@@ -59,14 +56,14 @@
 <main class="blog-shell">
     <section class="page-hero page-hero--blog" aria-label="صفحه مقالات">
         <div class="page-hero__overlay"></div>
-        <div class="container_me page-hero__inner">
+        <div class="container_me page-hero__inner mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
             <span class="eyebrow">مجله سوغات قائنات</span>
             <h1>وبلاگ و مقالات</h1>
         </div>
         <img src="public/images/blogs/34/1707833391.jpg" alt="مجله سوغات قائنات">
     </section>
 
-    <div class="container_me blog">
+    <div class="container_me blog mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="blog-layout">
             <aside class="blog-sidebar" aria-label="جدیدترین مقالات">
                 <h3>جدیدترین مقالات</h3>
@@ -91,21 +88,21 @@
             <section class="blog-list" aria-label="لیست مقالات">
                 <div class="flex flex-wrap my-2" aria-live="polite">
                     <div class="w-full md:w-1/3 p-3">
-                        <article class="card">
-                            <div class="card-head relative p-0">
-                                <div class="card-hover absolute"></div>
-                                <img class="card-img-top w-full h-full" src="public/images/blogs/1/thumb_blog-1.jpg" alt="روش تشخیص زعفران اصل">
+                        <article class="card rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">
+                            <div class="card-head relative p-0 rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">
+                                <div class="card-hover absolute rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md"></div>
+                                <img class="card-img-top w-full h-full rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md" src="public/images/blogs/1/thumb_blog-1.jpg" alt="روش تشخیص زعفران اصل">
                             </div>
-                            <div class="card-body py-4 relative text-center flex flex-column justify-between items-center">
+                            <div class="card-body py-4 relative text-center flex flex-column justify-between items-center rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">
                                 <div class="top-blog">
                                     <div class="time absolute"><span>۱۴۰۳/۰۷/۱۲</span></div>
-                                    <h5 class="card-title font-xl-bold mt-2">روش تشخیص زعفران اصل</h5>
-                                    <p class="card-text font-sm">چند نکته کاربردی برای خرید زعفران باکیفیت...</p>
+                                    <h5 class="card-title font-xl-bold mt-2 rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">روش تشخیص زعفران اصل</h5>
+                                    <p class="card-text font-sm rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">چند نکته کاربردی برای خرید زعفران باکیفیت...</p>
                                 </div>
                                 <div class="bottom-blog">
                                     <div class="point flex justify-center items-center text-secondary mb-2">
                                         <div class="comment relative">
-                                            <span class="font-lg btn-group-vertical"><i class="far fa-heart"></i></span>
+                                            <span class="font-lg btn-group-vertical inline-flex items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-amber-300"><i class="far fa-heart"></i></span>
                                             <span class="absolute counter-comment">0</span>
                                         </div>
                                         <span class="mx-2 font-md-bold">|</span>
@@ -124,21 +121,21 @@
                     </div>
 
                     <div class="w-full md:w-1/3 p-3">
-                        <article class="card">
-                            <div class="card-head relative p-0">
-                                <div class="card-hover absolute"></div>
-                                <img class="card-img-top w-full h-full" src="public/images/blogs/2/thumb_blog-2.jpg" alt="خواص زعفران در آشپزی">
+                        <article class="card rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">
+                            <div class="card-head relative p-0 rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">
+                                <div class="card-hover absolute rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md"></div>
+                                <img class="card-img-top w-full h-full rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md" src="public/images/blogs/2/thumb_blog-2.jpg" alt="خواص زعفران در آشپزی">
                             </div>
-                            <div class="card-body py-4 relative text-center flex flex-column justify-between items-center">
+                            <div class="card-body py-4 relative text-center flex flex-column justify-between items-center rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">
                                 <div class="top-blog">
                                     <div class="time absolute"><span>۱۴۰۳/۰۷/۰۸</span></div>
-                                    <h5 class="card-title font-xl-bold mt-2">خواص زعفران در آشپزی</h5>
-                                    <p class="card-text font-sm">با کاربردهای زعفران در غذاهای ایرانی آشنا شوید...</p>
+                                    <h5 class="card-title font-xl-bold mt-2 rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">خواص زعفران در آشپزی</h5>
+                                    <p class="card-text font-sm rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">با کاربردهای زعفران در غذاهای ایرانی آشنا شوید...</p>
                                 </div>
                                 <div class="bottom-blog">
                                     <div class="point flex justify-center items-center text-secondary mb-2">
                                         <div class="comment relative">
-                                            <span class="font-lg btn-group-vertical"><i class="far fa-heart"></i></span>
+                                            <span class="font-lg btn-group-vertical inline-flex items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-amber-300"><i class="far fa-heart"></i></span>
                                             <span class="absolute counter-comment">0</span>
                                         </div>
                                         <span class="mx-2 font-md-bold">|</span>
@@ -214,24 +211,24 @@
                     outputs +=
                         `
                         <div class="w-full md:w-1/3 p-3">
-                            <div class="card">
-                                <div class="card-head relative p-0">
-                                    <div class="card-hover absolute"></div>
-                                    <img class="card-img-top w-full h-full"
+                            <div class="card rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">
+                                <div class="card-head relative p-0 rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">
+                                    <div class="card-hover absolute rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md"></div>
+                                    <img class="card-img-top w-full h-full rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md"
                                          src="public/images/blogs/${value['id']}/thumb_${value['img']}">
                                 </div>
-                                <div class="card-body py-4 relative text-center flex flex-column justify-between items-center">
+                                <div class="card-body py-4 relative text-center flex flex-column justify-between items-center rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">
                                     <div class="top-blog">
                                         <div class="time absolute">
                                             <span>${value['time']}</span>
                                         </div>
-                                        <h5 class="card-title font-xl-bold mt-2">${value['title']}</h5>
-                                        <p class="card-text font-sm">${descriptionBlog}</p>
+                                        <h5 class="card-title font-xl-bold mt-2 rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">${value['title']}</h5>
+                                        <p class="card-text font-sm rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">${descriptionBlog}</p>
                                     </div>
                                     <div class="bottom-blog">
                                         <div class="point flex justify-center items-center text-secondary mb-2">
                                             <div class="comment relative">
-                                                <span class=" font-lg btn-group-vertical"><i
+                                                <span class=" font-lg btn-group-vertical inline-flex items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-amber-300"><i
                                                             class="far fa-heart"></i></span>
                                                 <span class="absolute counter-comment">${value['favorite']}</span>
                                             </div>
