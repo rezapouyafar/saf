@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>فروشگاه اینترنتی زعفران قائن</title>
     <!-- Required meta tags -->
     <base href="./">
@@ -74,23 +75,23 @@
                 <div class="contact-modern__methods">
                     <a class="contact-modern__method" href="tel:05632222222">
                         <span class="contact-modern__method-icon"><i class="fas fa-phone"></i></span>
-                        <span><small>پشتیبانی سفارش</small><strong>۰۵۶-۳۲۲۲۲۲۲۲</strong></span>
+                        <span><text-sm>پشتیبانی سفارش</text-sm><strong>۰۵۶-۳۲۲۲۲۲۲۲</strong></span>
                         <i class="fas fa-chevron-left contact-modern__method-arrow"></i>
                     </a>
                     <a class="contact-modern__method" href="tel:09120000000">
                         <span class="contact-modern__method-icon"><i class="fas fa-mobile-screen-button"></i></span>
-                        <span><small>تماس مستقیم</small><strong>۰۹۱۲-۰۰۰۰۰۰۰</strong></span>
+                        <span><text-sm>تماس مستقیم</text-sm><strong>۰۹۱۲-۰۰۰۰۰۰۰</strong></span>
                         <i class="fas fa-chevron-left contact-modern__method-arrow"></i>
                     </a>
                     <a class="contact-modern__method" href="mailto:info@example.com">
                         <span class="contact-modern__method-icon"><i class="fas fa-envelope"></i></span>
-                        <span><small>پاسخ‌گویی ایمیلی</small><strong>info@example.com</strong></span>
+                        <span><text-sm>پاسخ‌گویی ایمیلی</text-sm><strong>info@example.com</strong></span>
                         <i class="fas fa-chevron-left contact-modern__method-arrow"></i>
                     </a>
                 </div>
                 <div class="contact-modern__hours">
                     <i class="fas fa-clock"></i>
-                    <span><strong>ساعت پاسخ‌گویی</strong><small>شنبه تا پنج‌شنبه، ۹ تا ۱۸</small></span>
+                    <span><strong>ساعت پاسخ‌گویی</strong><text-sm>شنبه تا پنج‌شنبه، ۹ تا ۱۸</text-sm></span>
                 </div>
             </aside>
 
@@ -228,9 +229,9 @@
 
                 var alertTicket = $(".alert-ticket");
                 if (data.msg && data.hasError == true) {
-                    alertTicket.addClass('alert-danger').removeClass('alert-success').html(data.msg).fadeIn().delay(4000).fadeOut();
+                    alertTicket.addClass('border-red-200 bg-red-50 text-red-800').removeClass('border-green-200 bg-green-50 text-green-800').html(data.msg).fadeIn().delay(4000).fadeOut();
                 } else if (data.msg && data.hasError == false) {
-                    alertTicket.removeClass('alert-danger').addClass('alert-success').html(data.msg).fadeIn().delay(4000).fadeOut();
+                    alertTicket.removeClass('border-red-200 bg-red-50 text-red-800').addClass('border-green-200 bg-green-50 text-green-800').html(data.msg).fadeIn().delay(4000).fadeOut();
                     $('input,textarea').val('');
                 }
             }
@@ -242,9 +243,9 @@
 <footer class="storefront-shell-footer">
     <div class="storefront-shell-inner">
         <div class="storefront-shell-trust">
-            <div><i class="fas fa-shield-alt"></i><span><strong>خرید مطمئن</strong><small>تضمین اصالت محصولات</small></span></div>
-            <div><i class="fas fa-truck-fast"></i><span><strong>ارسال سریع</strong><small>بسته‌بندی امن تا درب خانه</small></span></div>
-            <div><i class="fas fa-headset"></i><span><strong>پشتیبانی واقعی</strong><small>همراه شما در تمام مسیر خرید</small></span></div>
+            <div><i class="fas fa-shield-alt"></i><span><strong>خرید مطمئن</strong><text-sm>تضمین اصالت محصولات</text-sm></span></div>
+            <div><i class="fas fa-truck-fast"></i><span><strong>ارسال سریع</strong><text-sm>بسته‌بندی امن تا درب خانه</text-sm></span></div>
+            <div><i class="fas fa-headset"></i><span><strong>پشتیبانی واقعی</strong><text-sm>همراه شما در تمام مسیر خرید</text-sm></span></div>
         </div>
         <div class="storefront-shell-footer-main">
             <div class="storefront-shell-footer-brand">
