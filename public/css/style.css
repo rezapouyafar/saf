@@ -1,27 +1,27 @@
 /*  LOGIN AND REGISTRATION  */
-@import "styles/login-registration.css";
+@import "./styles/login-registration.css";
 /*  ALL PRODUCTS  */
-@import "styles/all-products.css";
+@import "./styles/all-products.css";
 /*  CONTACT  */
-@import "styles/contact.css";
+@import "./styles/contact.css";
 /*  BLOG  */
-@import "styles/blog.css";
+@import "./styles/blog.css";
 /*  product  */
-@import "styles/product.css";
+@import "./styles/product.css";
 /*  CARD  */
-@import "styles/card.css";
+@import "./styles/card.css";
 /*  SINGLE BLOG  */
-@import "styles/single-blog.css";
+@import "./styles/single-blog.css";
 /*  ABOUT  */
-@import "styles/about.css";
+@import "./styles/about.css";
 /*  GALLERY  */
-@import "styles/gallery.css";
+@import "./styles/gallery.css";
 /*  PANEL  */
-@import "styles/panel.css";
+@import "./styles/panel.css";
 /*  ADMIN  */
-@import "styles/admin.css";
+@import "./styles/admin.css";
 /*  NOT FOUND  */
-@import "styles/notFound.css";
+@import "./styles/notFound.css";
 
 /* CUSTOM STYLES */
 
