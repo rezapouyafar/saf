@@ -1,0 +1,11 @@
+{
+  "name": "saf-tailwind-storefront",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/tailwind.css -o ./public/css/tailwind.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "tailwindcss": "^4.1.13"
+  }
+}
