@@ -1,0 +1,12 @@
+{
+  "name": "saf",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ./public/css/tailwind.input.css -o ./public/css/tailwind.css --minify",
+    "dev:css": "tailwindcss -i ./public/css/tailwind.input.css -o ./public/css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.13",
+    "tailwindcss": "^4.1.13"
+  }
+}
