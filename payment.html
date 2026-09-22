@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>فروشگاه اینترنتی زعفران قائن</title>
     <!-- Required meta tags -->
     <base href="./">
@@ -115,17 +116,17 @@
                         <div class="mini-stat">
                             <span>جمع کل خرید</span>
                             <strong id="basketPrice">۰</strong>
-                            <small>تومان</small>
+                            <text-sm>تومان</text-sm>
                         </div>
                         <div class="mini-stat">
                             <span>تخفیف کالاها</span>
                             <strong id="basketDiscount">۰</strong>
-                            <small>تومان</small>
+                            <text-sm>تومان</text-sm>
                         </div>
                         <div class="mini-stat">
                             <span>هزینه ارسال</span>
                             <strong id="postPrice">۰</strong>
-                            <small>تومان</small>
+                            <text-sm>تومان</text-sm>
                         </div>
                     </div>
 
@@ -134,18 +135,18 @@
                             <span>مبلغ کارت هدیه</span>
                             <strong id="giftPrice">۰</strong>
                             <input type="hidden" class="gift-code" name="gift_code">
-                            <small>تومان</small>
+                            <text-sm>تومان</text-sm>
                         </div>
                         <div class="price-line discount-amount">
                             <span>مبلغ کد تخفیف</span>
                             <strong id="discountPrice">۰</strong>
                             <input type="hidden" class="discount-code" name="discount_code">
-                            <small>تومان</small>
+                            <text-sm>تومان</text-sm>
                         </div>
                         <div class="price-line total-line">
                             <span>مبلغ قابل پرداخت</span>
                             <strong id="priceTotal">۰</strong>
-                            <small>تومان</small>
+                            <text-sm>تومان</text-sm>
                         </div>
                     </div>
 
@@ -293,9 +294,9 @@
 <footer class="storefront-shell-footer">
     <div class="storefront-shell-inner">
         <div class="storefront-shell-trust">
-            <div><i class="fas fa-shield-alt"></i><span><strong>خرید مطمئن</strong><small>تضمین اصالت محصولات</small></span></div>
-            <div><i class="fas fa-truck-fast"></i><span><strong>ارسال سریع</strong><small>بسته‌بندی امن تا درب خانه</small></span></div>
-            <div><i class="fas fa-headset"></i><span><strong>پشتیبانی واقعی</strong><small>همراه شما در تمام مسیر خرید</small></span></div>
+            <div><i class="fas fa-shield-alt"></i><span><strong>خرید مطمئن</strong><text-sm>تضمین اصالت محصولات</text-sm></span></div>
+            <div><i class="fas fa-truck-fast"></i><span><strong>ارسال سریع</strong><text-sm>بسته‌بندی امن تا درب خانه</text-sm></span></div>
+            <div><i class="fas fa-headset"></i><span><strong>پشتیبانی واقعی</strong><text-sm>همراه شما در تمام مسیر خرید</text-sm></span></div>
         </div>
         <div class="storefront-shell-footer-main">
             <div class="storefront-shell-footer-brand">
