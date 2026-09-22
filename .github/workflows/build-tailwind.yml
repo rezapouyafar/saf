@@ -29,7 +29,8 @@ jobs:
       - run: npm run build:css
       - name: Commit generated CSS
         run: |
-          if git diff --quiet -- public/css/tailwind.css; then
+          git add -f public/css/tailwind.css
+          if git diff --cached --quiet -- public/css/tailwind.css; then
             echo "No CSS changes"
             exit 0
           fi
