@@ -1,0 +1,36 @@
+@import "tailwindcss" source("../");
+
+@theme {
+  --font-sans: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-50: #fffaf0;
+  --color-brand-100: #fff2cf;
+  --color-brand-500: #d97706;
+  --color-brand-600: #b45309;
+  --color-brand-700: #92400e;
+}
+
+@source "../*.html";
+@source "../admin/**/*.html";
+
+/* Transitional imports: these are now processed by Tailwind's build pipeline
+   and will be removed as their selectors are converted to utilities. */
+@import "../public/css/style.css";
+@import "../public/css/redesign.css";
+@import "../public/css/storefront-shell.css";
+@import "../public/css/ecommerce.css";
+@import "../public/css/product-page.css";
+@import "../public/css/auth-recovery.css";
+@import "../public/css/flipTimer.css";
+@import "../public/css/styles/about.css";
+@import "../public/css/styles/all-products.css";
+@import "../public/css/styles/blog.css";
+@import "../public/css/styles/card.css";
+@import "../public/css/styles/contact.css";
+@import "../public/css/styles/gallery.css";
+@import "../public/css/styles/login-registration.css";
+@import "../public/css/styles/notFound.css";
+@import "../public/css/styles/panel-addresses.css";
+@import "../public/css/styles/panel.css";
+@import "../public/css/styles/product.css";
+@import "../public/css/styles/single-blog.css";
+@import "../public/css/styles/admin.css";
