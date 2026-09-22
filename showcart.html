@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>فروشگاه اینترنتی زعفران قائن</title>
     <!-- Required meta tags -->
     <base href="./">
@@ -91,7 +92,7 @@
                 <div class="summary-line"><span>هزینه ارسال</span><strong>۱۵۰,۰۰۰ تومان</strong></div>
                 <div class="summary-line"><span>مالیات</span><strong>۱۸۰,۰۰۰ تومان</strong></div>
                 <div class="summary-total"><span>مبلغ نهایی</span><strong>۲,۳۱۰,۰۰۰ تومان</strong></div>
-                <a class="checkout-btn inline-flex items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-amber-300" href="checklogin.html">تکمیل خرید</a>
+                <a class="checkout-inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold transition-colors inline-flex items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-amber-300" href="checklogin.html">تکمیل خرید</a>
                 <a class="continue-link" href="products.html">ادامه خرید</a>
             </aside>
         </div>
@@ -119,7 +120,7 @@
 
                 output += `
                 <tr class="text-center">
-                    <td class="flex justify-content-start items-center text-right">
+                    <td class="flex justify-start items-center text-right">
                         <div class="right ml-3">
                             <img class="max-w-full h-auto" src="public/images/products/${value['id']}/product.jpg" width="115" height="115">
                         </div>
@@ -128,7 +129,7 @@
                         </div>
                     </td>
                     <td>
-                        <div class="product-count border rounded-lg p-2 flex justify-between items-center"  data-row-basket="${value['basketRow']}">
+                        <div class="product-count border rounded-lg p-2 flex justify-between items-center"  data-flex flex-wrap-basket="${value['basketRow']}">
                         <span class="plus font-sm text-sky-600" onclick="prodcutCounter(this,'plus')"><i class="fas fa-plus"></i></span>
                             <span class="counter_product font-md text-sky-600">${value['tedad']}</span>
                             <span class="minus font-sm ${classMinus}" onclick="prodcutCounter(this,'minus')"><i class="fas fa-minus"></i></span>
@@ -213,7 +214,7 @@
             }
         }
         var tedad = $(tag).siblings('.counter_product').text();
-        var rowBasket = $(tag).parent().attr('data-row-basket');
+        var rowBasket = $(tag).parent().attr('data-flex flex-wrap-basket');
         updateBasket(tedad, rowBasket);
     }
 
