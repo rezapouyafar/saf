@@ -27,6 +27,16 @@ jobs:
           node-version: 22
       - run: npm install
       - run: npm run build:css
+      - name: Verify Tailwind migration
+        run: |
+          if grep -RniE 'bootstrap(-rtl)?\.css|cdn\.jsdelivr\.net/npm/@tailwindcss/browser' --include='*.html' .; then
+            echo "Legacy Bootstrap CSS or Tailwind Play CDN reference found"
+            exit 1
+          fi
+          if grep -RniE '<link[^>]+bootstrap' --include='*.html' .; then
+            echo "Bootstrap stylesheet reference found"
+            exit 1
+          fi
       - name: Commit generated CSS
         run: |
           git add -f public/css/tailwind.css
