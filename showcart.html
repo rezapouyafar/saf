@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>فروشگاه اینترنتی زعفران قائن</title>
     <!-- Required meta tags -->
     <base href="./">
@@ -8,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/x-icon" href="public/images/favicon.png">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="public/css/bootstrap-rtl.css">
     <link rel="stylesheet" href="public/css/slick.css">
     <link rel="stylesheet" href="public/css/slick-theme.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -126,18 +126,18 @@
 
                 output += `
                 <tr class="text-center">
-                    <td class="d-flex justify-content-start align-items-center text-right">
+                    <td class="flex justify-content-start items-center text-right">
                         <div class="right ml-3">
-                            <img class="img-fluid" src="public/images/products/${value['id']}/product.jpg" width="115" height="115">
+                            <img class="max-w-full h-auto" src="public/images/products/${value['id']}/product.jpg" width="115" height="115">
                         </div>
                         <div class="left">
                             <p class="font-sm-bold mb-0">${value['title']}</p>
                         </div>
                     </td>
                     <td>
-                        <div class="product-count border rounded-lg p-2 d-flex justify-content-between align-items-center"  data-row-basket="${value['basketRow']}">
-                        <span class="plus font-sm text-info" onclick="prodcutCounter(this,'plus')"><i class="fas fa-plus"></i></span>
-                            <span class="counter_product font-md text-info">${value['tedad']}</span>
+                        <div class="product-count border rounded-lg p-2 flex justify-between items-center"  data-row-basket="${value['basketRow']}">
+                        <span class="plus font-sm text-sky-600" onclick="prodcutCounter(this,'plus')"><i class="fas fa-plus"></i></span>
+                            <span class="counter_product font-md text-sky-600">${value['tedad']}</span>
                             <span class="minus font-sm ${classMinus}" onclick="prodcutCounter(this,'minus')"><i class="fas fa-minus"></i></span>
                         </div>
                     </td>
@@ -147,12 +147,12 @@
                     <td class="font-md-bold">
                         <span class="price">${allProductPrice}</span>
                         <span class="toman mr-2">تومان</span>
-                        <div class="font-sm text-danger">(میزان تخفیف
+                        <div class="font-sm text-red-600">(میزان تخفیف
                             : ${discountAmount} تومان)
                         </div>
-                        <div class="font-sm text-success">(مبلغ قابل پرداخت : ${payPriceProduct} تومان)</div>
+                        <div class="font-sm text-green-600">(مبلغ قابل پرداخت : ${payPriceProduct} تومان)</div>
                     </td>
-                    <td class="remove alert alert-danger rounded-0 text-center">
+                    <td class="remove rounded-md border p-3 border-red-200 bg-red-50 text-red-800 rounded-none text-center">
                     <span class="cur_pointer" onclick="removeBasket(${value['basketRow']})"><i
                                 class="fa fa-times"></i></span>
                     </td>
@@ -160,7 +160,7 @@
             `;
             })
         } else {
-            output += '<td colspan="5" class="alert alert-warning text-center">سبد خرید شما خالی است!</td>';
+            output += '<td colspan="5" class="rounded-md border p-3 border-amber-200 bg-amber-50 text-amber-800 text-center">سبد خرید شما خالی است!</td>';
             $('a[href="checklogin.html"]').addClass('disabled');
         }
         productContainer.html(output);
