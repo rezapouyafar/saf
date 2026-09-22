@@ -12,9 +12,6 @@
     <link rel="stylesheet" href="public/css/slick.css">
     <link rel="stylesheet" href="public/css/slick-theme.css">
     <link rel="stylesheet" href="public/css/flipTimer.css">
-    <link rel="stylesheet" href="public/css/style.css">
-    <link rel="stylesheet" href="public/css/redesign.css">
-    <link rel="stylesheet" href="public/css/storefront-shell.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
           integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -31,10 +28,10 @@
     <script src="public/js/frotel/city.js"></script>
     <script src="public/js/script.js"></script>
 </head>
-<body class="checkout-page">
+<body class="checkout-page" class="min-h-screen bg-stone-50 text-stone-800 antialiased">
 <!-- CONTENT -->
 <main class="checkout-shell">
-    <div class="container_me">
+    <div class="container_me mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="checkout-header">
             <span class="eyebrow">تکمیل خرید</span>
             <h1>انتخاب آدرس و ارسال</h1>
@@ -67,35 +64,35 @@
                 </div>
 
                 <div class="address-list">
-                    <article class="address-card selected" tabindex="0">
-                        <div class="address-card-head">
+                    <article class="address-card selected rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md" tabindex="0">
+                        <div class="address-card-head rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">
                             <span class="badge">آدرس اصلی</span>
                             <strong>علی رضایی</strong>
                         </div>
-                        <div class="address-card-body">
+                        <div class="address-card-body rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">
                             <p><span>استان:</span> خراسان جنوبی</p>
                             <p><span>شهر:</span> قائن</p>
                             <p><span>آدرس:</span> خیابان امام، کوچه بهار، پلاک ۱۲</p>
                             <p><span>کد پستی:</span> ۹۷۶۱۶۱۱۱۱۱</p>
                         </div>
-                        <div class="address-card-foot">
+                        <div class="address-card-foot rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">
                             <span>شماره تماس اضطراری: ۰۹۱۲۰۰۰۰۰۰۰</span>
                             <span>تلفن ثابت: ۰۵۶۳۲۲۲۲۲۲۲</span>
                         </div>
                     </article>
 
-                    <article class="address-card" tabindex="0">
-                        <div class="address-card-head">
+                    <article class="address-card rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md" tabindex="0">
+                        <div class="address-card-head rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">
                             <span class="badge">آدرس جایگزین</span>
                             <strong>مریم رضایی</strong>
                         </div>
-                        <div class="address-card-body">
+                        <div class="address-card-body rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">
                             <p><span>استان:</span> خراسان جنوبی</p>
                             <p><span>شهر:</span> بیرجند</p>
                             <p><span>آدرس:</span> بلوار مدرس، کوچه دانش، پلاک ۲۵</p>
                             <p><span>کد پستی:</span> ۹۶۱۶۵۶۵۶۶</p>
                         </div>
-                        <div class="address-card-foot">
+                        <div class="address-card-foot rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">
                             <span>شماره تماس اضطراری: ۰۹۳۵۵۵۵۵۵۵۵</span>
                             <span>تلفن ثابت: ۰۵۶۳۲۲۲۲۲۲۲</span>
                         </div>
@@ -103,7 +100,7 @@
                 </div>
             </section>
 
-            <aside class="summary-card">
+            <aside class="summary-card rounded-2xl border border-stone-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">
                 <h3>خلاصه سفارش</h3>
                 <div class="summary-row">
                     <span>جمع جزء</span>
@@ -153,8 +150,8 @@
         </section>
 
         <div class="checkout-actions">
-            <a href="showcart.html" class="secondary-btn">بازگشت به سبد خرید</a>
-            <a href="review.html" class="primary-btn">ثبت اطلاعات و ادامه خرید</a>
+            <a href="showcart.html" class="secondary-btn inline-flex items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-amber-300">بازگشت به سبد خرید</a>
+            <a href="review.html" class="primary-btn inline-flex items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-amber-300">ثبت اطلاعات و ادامه خرید</a>
         </div>
     </div>
 </main>
