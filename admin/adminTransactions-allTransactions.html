@@ -6,7 +6,8 @@
     <base href="./">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../public/css/bootstrap-rtl.css">
     <link rel="stylesheet" href="../public/css/persianDatepicker-lightorang.css">
     <link rel="stylesheet" href="../public/css/style.css">
@@ -26,16 +27,16 @@
 <body>
 <!-- HEADER -->
 <header class="container-fluid" id="admin-header">
-    <div class="row">
-        <div class="col-12 col-md-3 col-lg-2 p-0">
-            <div class="branding d-flex justify-content-center align-items-center h-100">
+    <div class="flex flex-wrap">
+        <div class="w-full col-md-3 col-lg-2 p-0">
+            <div class="branding flex justify-center items-center h-full">
                 <img class="img-thumbnail border rounded-circle" src="../public/images/logo.png">
-                <span class="font-lg-bold pr-2 text-light">پنل مدیریت</span>
+                <span class="text-lg font-bold pr-2 text-light">پنل مدیریت</span>
             </div>
         </div>
-        <div class="col-12 col-md-9 col-lg-10 p-0">
-            <div class="header-details h-100 d-flex justify-content-end align-items-center">
-                <ul class="d-flex m-0 ml-5 p-0">
+        <div class="w-full col-md-9 col-lg-10 p-0">
+            <div class="header-details h-full flex justify-content-end items-center">
+                <ul class="flex m-0 ml-5 p-0">
                                         <li class="nav-item dropdown ml-4">
                         <a class="text-light" href="#" role="button" data-toggle="dropdown">
                             <span class="alert-count">1</span>
@@ -45,34 +46,34 @@
                                                     <div class="dropdown-menu h-auto p-0 border-0 ticket_notify" id="ticket_notify">
                                                                     <a href="">
                                         <div class="ticket border">
-                                            <div class="d-flex justify-content-between align-items-center p-2">
-                                                <div class="d-flex justify-content-center align-items-center img-notify">
+                                            <div class="flex justify-between items-center p-2">
+                                                <div class="flex justify-center items-center img-notify">
                                                     <img class="rounded-circle border border-secondary"
                                                          src="../public/images/gravatar.png">
-                                                    <span class="font-sm text-secondary mr-2">مریم احمدی</span>
+                                                    <span class="text-sm text-secondary mr-2">مریم احمدی</span>
                                                 </div>
                                                 <span class="badge badge-danger p-1">مهم</span>
                                             </div>
-                                            <p class="ticket-msg font-sm border-top p-2 m-0">پیگیری سفارش جدید</p>
+                                            <p class="ticket-msg text-sm border-top p-2 m-0">پیگیری سفارش جدید</p>
                                         </div>
                                     </a>
                                                                 <a href="adminTickets-allTickets.html"
-                                   class="alert alert-danger m-0 font-sm py-1 text-center rounded-0 rounded-bottom d-block">مشاهد
+                                   class="alert alert-danger m-0 text-sm py-1 text-center rounded-0 rounded-bottom d-block">مشاهد
                                     تیکت ها...</a>
                             </div>
                                             </li>
                     <li class="nav-item dropdown">
                         <a class="text-light" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown">
-                            <span class="font-sm"><i class="fas fa-user"></i></span>
+                            <span class="text-sm"><i class="fas fa-user"></i></span>
                             <span class="font-md"><i class="fas fa-chevron-down"></i></span>
                         </a>
                         <div class="dropdown-menu h-auto">
-                            <a class="dropdown-item font-sm" href=""><span class="font-sm ml-2"><i
+                            <a class="dropdown-item text-sm" href=""><span class="text-sm ml-2"><i
                                             class="fas fa-undo"></i></span>بازگشت به سایت</a>
-                            <a class="dropdown-item font-sm" href="panel.html"><span class="font-sm ml-2"><i
+                            <a class="dropdown-item text-sm" href="panel.html"><span class="text-sm ml-2"><i
                                             class="fas fa-user"></i></span>پروفایل</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item font-sm" href="logout"><span class="font-sm ml-2"><i
+                            <a class="dropdown-item text-sm" href="logout"><span class="text-sm ml-2"><i
                                             class="fas fa-sign-out-alt"></i></span>خروج</a>
                         </div>
                     </li>
@@ -83,15 +84,15 @@
 </header>
 <!-- MAIN -->
 <div class="container-fluid main" id="admin-main">
-    <div class="row position-relative">
-        <div class="hamburger-menu d-flex d-md-none p-1 rounded-top">
+    <div class="flex flex-wrap relative">
+        <div class="hamburger-menu flex d-md-none p-1 rounded-top">
             <div class="line line1"></div>
             <div class="line line2"></div>
             <div class="line line3"></div>
         </div>
-        <div class="col-12 col-md-3 col-lg-2 p-0 d-md-block" id="sidebar">
+        <div class="w-full col-md-3 col-lg-2 p-0 d-md-block" id="sidebar">
             <div>
-                <div class="user-image d-flex flex-column justify-content-center align-items-center p-3">
+                <div class="user-image flex flex-column justify-center items-center p-3">
                     <img class="border rounded-circle" src="../public/images/gravatar.png" alt="">
                     <span class="font-md-bold text-white mt-3">علی رضایی</span>
                 </div>
@@ -102,16 +103,16 @@
                     </li>
                     <!-- PRODUCTS -->
                     <li class="panel">
-                        <a class="d-flex justify-content-between align-items-center font-md">
+                        <a class="flex justify-between items-center font-md">
                             <span><span><i class="fas fa-box-open btn-group-vertical ml-2"></i></span>محصولات</span>
                             <span class="chevron btn-group-vertical"><i class="fas fa-chevron-down"></i></span>
                         </a>
                         <ul class="p-0">
                             <li>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminProducts-allProducts.html"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>کل محصولات</a>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminProducts-addProduct.html"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>افزودن محصول جدید</a>
                             </li>
@@ -119,16 +120,16 @@
                     </li>
                     <!-- CATEGORY -->
                     <li class="panel">
-                        <a class="d-flex justify-content-between align-items-center font-md">
+                        <a class="flex justify-between items-center font-md">
                             <span><span><i class="fas fa-layer-group btn-group-vertical ml-2"></i></span>دسته ها</span>
                             <span class="chevron btn-group-vertical"><i class="fas fa-chevron-down"></i></span>
                         </a>
                         <ul class="p-0">
                             <li>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminCategories-allCategories.html"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>کل دسته ها</a>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminCategories-addCategory.html"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>افزودن دسته جدید</a>
                             </li>
@@ -136,28 +137,28 @@
                     </li>
                     <!-- SITE SETTING -->
                     <li class="panel">
-                        <a class="d-flex justify-content-between align-items-center font-md">
+                        <a class="flex justify-between items-center font-md">
                             <span><span><i class="fas fa-cogs btn-group-vertical ml-2"></i></span>تنظیمات سایت</span>
                             <span class="chevron btn-group-vertical"><i class="fas fa-chevron-down"></i></span>
                         </a>
                         <ul class="p-0">
                             <li>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminSetting/format"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>قالب</a>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminSetting/social"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>شبکه های اجتماعی</a>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminSetting-contact.html"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>اطلاعات تماس</a>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminSetting/limit"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>محدودیت ها و زمان</a>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminSetting/titles"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>توضیحات صفحه اصلی</a>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminSetting/about"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>توضیحات صفحه درباره ما</a>
                             </li>
@@ -165,16 +166,16 @@
                     </li>
                     <!-- USERS -->
                     <li class="panel">
-                        <a class="d-flex justify-content-between align-items-center font-md">
+                        <a class="flex justify-between items-center font-md">
                             <span><span><i class="fas fa-users btn-group-vertical ml-2"></i></span>کاربران</span>
                             <span class="chevron btn-group-vertical"><i class="fas fa-chevron-down"></i></span>
                         </a>
                         <ul class="p-0">
                             <li>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminUsers-allUsers.html"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>همه کاربران</a>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminUsers-addUser.html"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>ایجاد کاربر جدید(ویرایش)</a>
                             </li>
@@ -182,16 +183,16 @@
                     </li>
                     <!-- TICKETS -->
                     <li class="panel">
-                        <a class="d-flex justify-content-between align-items-center font-md">
+                        <a class="flex justify-between items-center font-md">
                             <span><span><i class="fas fa-ticket-alt btn-group-vertical ml-2"></i></span>تیکت ها</span>
                             <span class="chevron btn-group-vertical"><i class="fas fa-chevron-down"></i></span>
                         </a>
                         <ul class="p-0">
                             <li>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminTickets-allTickets.html"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>تیکت های کاربران</a>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminTickets/yourTickets"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>تیکت های شما</a>
                             </li>
@@ -199,13 +200,13 @@
                     </li>
                     <!-- COMMENTS -->
                     <li class="panel">
-                        <a class="d-flex justify-content-between align-items-center font-md">
+                        <a class="flex justify-between items-center font-md">
                             <span><span><i class="fas fa-comments btn-group-vertical ml-2"></i></span>نظرات</span>
                             <span class="chevron btn-group-vertical"><i class="fas fa-chevron-down"></i></span>
                         </a>
                         <ul class="p-0">
                             <li>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminComments-allComments.html"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>همه نظرات</a>
                             </li>
@@ -213,16 +214,16 @@
                     </li>
                     <!-- GALLERY -->
                     <li class="panel">
-                        <a class="d-flex justify-content-between align-items-center font-md">
+                        <a class="flex justify-between items-center font-md">
                             <span><span><i class="fas fa-images btn-group-vertical ml-2"></i></span>گالری</span>
                             <span class="chevron btn-group-vertical"><i class="fas fa-chevron-down"></i></span>
                         </a>
                         <ul class="p-0">
                             <li>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminGallery-gallery.html"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>تصاویر گالری</a>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminGallery-addPhoto.html"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>افزودن تصویر</a>
                             </li>
@@ -230,16 +231,16 @@
                     </li>
                     <!-- BLOGS -->
                     <li class="panel">
-                        <a class="d-flex justify-content-between align-items-center font-md">
+                        <a class="flex justify-between items-center font-md">
                             <span><span><i class="fas fa-rss-square btn-group-vertical ml-2"></i></span>وبلاگ ها</span>
                             <span class="chevron btn-group-vertical"><i class="fas fa-chevron-down"></i></span>
                         </a>
                         <ul class="p-0">
                             <li>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminBlogs-allBlogs.html"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>کل وبلاگ ها</a>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminBlogs-addBlog.html"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>افزودن(ویرایش) وبلاگ جدید</a>
                             </li>
@@ -247,13 +248,13 @@
                     </li>
                     <!-- TRANSACTION -->
                     <li class="panel">
-                        <a class="d-flex justify-content-between align-items-center font-md">
+                        <a class="flex justify-between items-center font-md">
                             <span><span><i class="fas fa-search-dollar btn-group-vertical ml-2"></i></span>تراکنش ها</span>
                             <span class="chevron btn-group-vertical"><i class="fas fa-chevron-down"></i></span>
                         </a>
                         <ul class="p-0">
                             <li>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminTransactions-allTransactions.html"><span
                                             class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>مشاهده تراکنش ها</a>
@@ -262,16 +263,16 @@
                     </li>
                     <!-- DISCOUNT CODE -->
                     <li class="panel">
-                        <a class="d-flex justify-content-between align-items-center font-md">
+                        <a class="flex justify-between items-center font-md">
                             <span><span><i class="fas fa-percentage btn-group-vertical ml-2"></i></span>کدهای تخفیف</span>
                             <span class="chevron btn-group-vertical"><i class="fas fa-chevron-down"></i></span>
                         </a>
                         <ul class="p-0">
                             <li>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminDiscountCodes-allDiscountCodes.html"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>کل کدهای تخفیف</a>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminDiscountCodes-addDiscountCode.html"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>افزودن(ویرایش) کد تخفیف</a>
                             </li>
@@ -279,16 +280,16 @@
                     </li>
                     <!-- GIFT CODE -->
                     <li class="panel">
-                        <a class="d-flex justify-content-between align-items-center font-md">
+                        <a class="flex justify-between items-center font-md">
                             <span><span><i class="fas fa-gifts btn-group-vertical ml-2"></i></span>کارت های هدیه</span>
                             <span class="chevron btn-group-vertical"><i class="fas fa-chevron-down"></i></span>
                         </a>
                         <ul class="p-0">
                             <li>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminGiftCards-allGiftCards.html"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>کل کارت های هدیه</a>
-                                <a class="font-sm "
+                                <a class="text-sm"
                                    href="adminGiftCards-addGiftCard.html"><span class="chevron btn-group-vertical ml-2"><i
                                                 class="fas fa-chevron-left"></i></span>افزودن(ویرایش) کارت هدیه</a>
                             </li>
@@ -297,7 +298,7 @@
                 </ul>
             </div>
         </div>
-        <div class="col-12 col-md-9 col-lg-10 p-0" id="content">
+        <div class="w-full col-md-9 col-lg-10 p-0" id="content">
             <!-- main -->
 
 
@@ -305,7 +306,7 @@
     <h3 class="pb-3 mb-4">همه تراکنش ها</h3>
     <div class="table-content rounded p-2 bg-white">
         <form action="" method="post" class="form-inline">
-            <div class="d-flex justify-content-between align-items-center py-2 px-3 w-100">
+            <div class="flex justify-between items-center py-2 px-3 w-full">
                 <div class="searching">
                     <input type="text" class="form-control form-control-sm" name="search" placeholder="جستجو...">
                     <input type="button" value="بگرد"
@@ -386,7 +387,7 @@
         </form>
     </div>
     <nav aria-label="Page navigation example" class="my-3">
-        <ul class="pagination justify-content-center align-items-center m-0"></ul>
+        <ul class="pagination justify-center items-center m-0"></ul>
     </nav>
 </div>
 
@@ -511,9 +512,9 @@
 </div>
 
 <footer class="container-fluid text-center" id="footer">
-    <div class="row h-100">
+    <div class="flex flex-wrap h-full">
         <div class="col-sm-12 m-auto">
-            <p class="m-0 font-sm">کلیه حقوق سایت متعلق به <a href="https://www.esfeshad.ir">سوغات قائن</a> می باشد.</p>
+            <p class="m-0 text-sm">کلیه حقوق سایت متعلق به <a href="https://www.esfeshad.ir">سوغات قائن</a> می باشد.</p>
         </div>
     </div>
 </footer>
