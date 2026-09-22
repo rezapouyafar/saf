@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+    <title>ورود یا ساخت حساب | سوغات قائنات</title>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="public/images/favicon.png">
+    <link rel="stylesheet" href="public/css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/redesign.css">
+    <link rel="stylesheet" href="public/css/auth-recovery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+</head>
+<body class="recovery-page">
+<main class="recovery-shell">
+    <div class="recovery-layout">
+        <section class="recovery-brand-panel">
+            <a class="recovery-brand" href="index.html"><img src="public/images/logo.png" alt="سوغات قائنات"><span>سوغات قائنات</span></a>
+            <div class="brand-orbit brand-orbit-one"></div><div class="brand-orbit brand-orbit-two"></div>
+            <div class="recovery-brand-content">
+                <span class="recovery-kicker"><i class="fas fa-sparkles"></i> خرید اصیل، ورود ساده</span>
+                <h1>به سفره‌ی اصیل قائنات برگردید.</h1>
+                <p>با ایمیل یا شماره موبایل وارد شوید و تجربه خرید زعفران و سوغات خراسان را ادامه دهید.</p>
+                <div class="recovery-benefits"><span><i class="fas fa-shield-halved"></i> ورود امن</span><span><i class="fas fa-bolt"></i> تأیید سریع</span><span><i class="fas fa-gift"></i> پاداش دعوت</span></div>
+            </div>
+            <div class="recovery-brand-footer"><span>مرحله ۱ از ۲</span><span class="brand-line"></span><span>شناسه شما</span></div>
+        </section>
+        <section class="recovery-card" aria-label="ورود یا ساخت حساب">
+            <div class="recovery-card-top"><span class="recovery-step">۰۱</span><span>ورود امن به حساب</span></div>
+            <div class="recovery-card-heading"><span class="recovery-icon"><i class="fas fa-arrow-left-to-bracket"></i></span><div><h2>ورود یا ساخت حساب</h2><p>ایمیل یا شماره موبایل خود را وارد کنید.</p></div></div>
+            <form class="recovery-form" id="recoverForm" action="verifyRecoveryCode.html" method="get">
+                <label class="recovery-field" for="recover-contact"><span>ایمیل یا شماره موبایل</span><div class="field-control"><i class="fas fa-at"></i><input id="recover-contact" name="contact" type="text" autocomplete="username" placeholder="مثلاً 09123456789 یا شما@ایمیل.com" required></div></label>
+                <label class="recovery-field" for="invite-code"><span>کد دعوت <em>اختیاری</em></span><div class="field-control"><i class="fas fa-ticket"></i><input id="invite-code" name="invite" type="text" autocomplete="off" placeholder="اگر کد دعوت دارید وارد کنید"></div></label>
+                <div class="invite-hint"><i class="fas fa-circle-info"></i><span>اگر از لینک دعوت وارد شده‌اید، کد دعوت به‌صورت خودکار ثبت شده است.</span></div>
+                <button class="recovery-primary" type="submit">دریافت کد تأیید <i class="fas fa-arrow-left"></i></button>
+            </form>
+            <a class="recovery-back-link" href="loginRegistration.html"><i class="fas fa-chevron-right"></i> بازگشت به صفحه ورود</a>
+            <p class="recovery-legal">با ادامه، قوانین استفاده و حریم خصوصی سوغات قائنات را می‌پذیرید.</p>
+        </section>
+    </div>
+</main>
+<script>
+    (function () {
+        var params = new URLSearchParams(window.location.search);
+        var inviteInput = document.getElementById('invite-code');
+        var invite = params.get('invite') || params.get('ref') || params.get('referral') || '';
+        if (invite) inviteInput.value = invite;
+        document.getElementById('recoverForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            var next = new URL('verifyRecoveryCode.html', window.location.href);
+            next.searchParams.set('contact', document.getElementById('recover-contact').value.trim());
+            if (inviteInput.value.trim()) next.searchParams.set('invite', inviteInput.value.trim());
+            window.location.href = next.href;
+        });
+    }());
+</script>
+</body>
+</html>

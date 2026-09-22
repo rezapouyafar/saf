@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+    <title>تأیید کد | سوغات قائنات</title>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="public/images/favicon.png">
+    <link rel="stylesheet" href="public/css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/redesign.css">
+    <link rel="stylesheet" href="public/css/auth-recovery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+</head>
+<body class="recovery-page">
+<main class="recovery-shell">
+    <div class="recovery-layout">
+        <section class="recovery-brand-panel">
+            <a class="recovery-brand" href="index.html"><img src="public/images/logo.png" alt="سوغات قائنات"><span>سوغات قائنات</span></a>
+            <div class="brand-orbit brand-orbit-one"></div><div class="brand-orbit brand-orbit-two"></div>
+            <div class="recovery-brand-content">
+                <span class="recovery-kicker"><i class="fas fa-sparkles"></i> فقط یک قدم تا ورود</span>
+                <h1>کد را وارد کنید، خرید ادامه دارد.</h1>
+                <p>کد ارسال‌شده را وارد کنید تا حساب شما با امنیت کامل آماده شود.</p>
+                <div class="recovery-benefits"><span><i class="fas fa-lock"></i> کد یک‌بارمصرف</span><span><i class="fas fa-clock"></i> اعتبار محدود</span><span><i class="fas fa-check"></i> فعال‌سازی سریع</span></div>
+            </div>
+            <div class="recovery-brand-footer"><span>مرحله ۲ از ۲</span><span class="brand-line"></span><span>تأیید هویت</span></div>
+        </section>
+        <section class="recovery-card" aria-label="تأیید کد">
+            <div class="recovery-card-top"><span class="recovery-step">۰۲</span><span>تأیید هویت</span></div>
+            <div class="recovery-card-heading"><span class="recovery-icon"><i class="fas fa-shield-check"></i></span><div><h2>کد تأیید را وارد کنید</h2><p id="deliveryMessage">کد ۵ رقمی ارسال‌شده را وارد کنید.</p></div></div>
+            <form class="recovery-form verification-form" id="otpForm" novalidate>
+                <div class="otp-inputs" aria-label="ورودی کد پنج رقمی"><input class="otp-input" type="text" maxlength="1" inputmode="numeric" aria-label="رقم اول"><input class="otp-input" type="text" maxlength="1" inputmode="numeric" aria-label="رقم دوم"><input class="otp-input" type="text" maxlength="1" inputmode="numeric" aria-label="رقم سوم"><input class="otp-input" type="text" maxlength="1" inputmode="numeric" aria-label="رقم چهارم"><input class="otp-input" type="text" maxlength="1" inputmode="numeric" aria-label="رقم پنجم"></div>
+                <div class="otp-meta"><span><i class="fas fa-hourglass-half"></i> زمان باقی‌مانده</span><strong id="countdown">01:30</strong></div>
+                <button type="button" id="resendCodeBtn" class="recovery-secondary">ارسال مجدد کد</button>
+                <button type="submit" class="recovery-primary">تأیید و ورود <i class="fas fa-arrow-left"></i></button>
+            </form>
+            <div class="invite-status" id="inviteStatus" hidden><i class="fas fa-gift"></i><span>کد دعوت شما ثبت شده و پس از ورود فعال می‌شود.</span></div>
+            <a class="recovery-back-link" href="recoverAccount.html"><i class="fas fa-chevron-right"></i> ویرایش ایمیل یا شماره موبایل</a>
+            <p class="recovery-legal">کد را با هیچ‌کس به اشتراک نگذارید.</p>
+        </section>
+    </div>
+</main>
+<script>
+    (function () {
+        var params = new URLSearchParams(window.location.search);
+        var contact = params.get('contact') || '';
+        var invite = params.get('invite') || params.get('ref') || params.get('referral') || '';
+        if (contact) document.getElementById('deliveryMessage').textContent = 'کد ۵ رقمی برای ' + (contact.length > 6 ? contact.slice(0, 3) + '***' + contact.slice(-3) : contact) + ' ارسال شد.';
+        if (invite) document.getElementById('inviteStatus').hidden = false;
+        var inputs = Array.from(document.querySelectorAll('.otp-input'));
+        inputs.forEach(function (input, index) {
+            input.addEventListener('input', function () { input.value = input.value.replace(/\D/g, '').slice(0, 1); if (input.value && inputs[index + 1]) inputs[index + 1].focus(); });
+            input.addEventListener('keydown', function (event) { if (event.key === 'Backspace' && !input.value && inputs[index - 1]) inputs[index - 1].focus(); if (event.key === 'ArrowLeft' && inputs[index - 1]) inputs[index - 1].focus(); if (event.key === 'ArrowRight' && inputs[index + 1]) inputs[index + 1].focus(); });
+            input.addEventListener('paste', function (event) { var pasted = (event.clipboardData || window.clipboardData).getData('text').replace(/\D/g, '').slice(0, 5); if (!pasted) return; event.preventDefault(); pasted.split('').forEach(function (digit, digitIndex) { if (inputs[digitIndex]) inputs[digitIndex].value = digit; }); inputs[Math.min(pasted.length, inputs.length) - 1].focus(); });
+        });
+        var seconds = 90, timer, countdown = document.getElementById('countdown'), resend = document.getElementById('resendCodeBtn');
+        function tick() { countdown.textContent = String(Math.floor(seconds / 60)).padStart(2, '0') + ':' + String(seconds % 60).padStart(2, '0'); if (seconds <= 0) { clearInterval(timer); resend.style.display = 'block'; } else seconds -= 1; }
+        function startTimer() { clearInterval(timer); seconds = 90; resend.style.display = 'none'; tick(); timer = setInterval(tick, 1000); }
+        startTimer(); resend.addEventListener('click', startTimer);
+        document.getElementById('otpForm').addEventListener('submit', function (event) { event.preventDefault(); if (inputs.some(function (input) { return !input.value; })) { inputs.find(function (input) { return !input.value; }).focus(); return; } window.location.href = 'panel.html'; });
+    }());
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+/*  SINGLE BLOG PAGE */
+.description .image-post {
+    height: 550px;
+}
+
+.description .image-post img {
+    height: 550px;
+    object-fit: cover;
+}
+
+.sidebar .post img {
+    width: 80px;
+    height: 60px;
+}
+
+.post h4{
+    font-size: 13px;
+}
+
+.post span{
+    font-size: 12px;
+}

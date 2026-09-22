@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+    <title>فروشگاه زعفران و زرشک | سوغات قائنات</title>
+    <!-- Required meta tags -->
+    <base href="./">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="public/images/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="public/css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="public/css/slick.css">
+    <link rel="stylesheet" href="public/css/slick-theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/flipTimer.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/redesign.css">
+    <link rel="stylesheet" href="public/css/storefront-shell.css">
+    <link rel="stylesheet" href="public/css/ecommerce.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+          integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="public/js/jquery.js"></script>
+    <script src="public/js/bootstrap.bundle.js"></script>
+    <script src="public/js/bootstrap.js"></script>
+    <script src="public/js/jquery.bootstrap-show-password.js"></script>
+    <script src="public/js/slick.js"></script>
+    <script src="public/js/jquery.flipTimer.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="public/js/frotel/ostan.js"></script>
+    <script src="public/js/frotel/city.js"></script>
+    <script src="public/js/script.js"></script>
+</head>
+<body class="shop-page">
+<header class="site-header storefront-shell-header">
+    <div class="wrap nav-row">
+        <a class="brand" href="index.html">
+            <img class="brand-mark" src="public/images/logo.png" alt="نشان سوغات قاینات">
+            <span>سوغات قاینات</span>
+        </a>
+        <nav class="nav-links" aria-label="ناوبری اصلی">
+            <a href="index.html">صفحه اصلی</a>
+            <a href="products.html" class="active">محصولات</a>
+            <a href="index.html#services">خدمات</a>
+            <a href="gallery.html">گالری تصاویر</a>
+            <a href="about.html">درباره ما</a>
+            <a href="contact.html">تماس با ما</a>
+        </nav>
+        <div class="nav-actions">
+            <a class="icon-button auth-link auth-guest" href="loginRegistration.html" aria-label="ورود و ثبت‌نام"><i class="fas fa-right-to-bracket"></i></a>
+            <a class="icon-button auth-link auth-member" href="panel.html" aria-label="حساب کاربری"><i class="fas fa-user-circle"></i></a>
+            <a class="icon-button cart-button" href="showcart.html" aria-label="سبد خرید"><i class="fas fa-shopping-bag"></i><span class="cart-count">۲</span></a>
+        </div>
+    </div>
+</header>
+<section class="catalog-page">
+    <div class="container_me">
+        <div class="catalog-hero">
+            <div>
+                <h1>همه محصولات</h1>
+                <p>زعفران، زرشک، پسته و ادویه‌های اصیل ایران، انتخابی برای هر سفره‌ای با اصالت و کیفیت</p>
+            </div>
+            <div class="hero-count"><strong>۲۴+</strong>محصول ویژه</div>
+        </div>
+        <div class="catalog-layout">
+            <aside class="catalog-sidebar">
+                <button class="filter-toggle" type="button" aria-expanded="false" aria-controls="catalog-filter-panel">
+                    <span><i class="fas fa-sliders-h"></i><b class="filter-toggle-text">فیلتر محصولات</b></span><i class="fas fa-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div class="catalog-filter-panel" id="catalog-filter-panel">
+                    <h2>فیلترها</h2>
+                    <ul class="category-list">
+                        <li><button class="active" type="button">همه محصولات <span>(۲۴)</span></button></li>
+                        <li><button type="button">زعفران <span>(۱۲)</span></button></li>
+                        <li><button type="button">زرشک <span>(۶)</span></button></li>
+                        <li><button type="button">پسته <span>(۴)</span></button></li>
+                        <li><button type="button">هدیه و پک <span>(۲)</span></button></li>
+                    </ul>
+                    <div class="filter-note"><i class="fas fa-shield-alt ml-1"></i> تضمین اصالت و تازگی همه سفارش‌ها</div>
+                </div>
+            </aside>
+            <div id="products" class="catalog-content">
+                <form action="" method="post" id="form_product">
+                    <div class="catalog-toolbar">
+                        <label class="catalog-search mb-0"><i class="fas fa-search"></i><input type="search" name="search" placeholder="جست‌وجوی محصول..." aria-label="جست‌وجوی محصول"></label>
+                        <label class="catalog-sort mb-0">
+                            <span class="sort-label">مرتب‌سازی</span>
+                            <div class="custom-select" data-select="sort_as">
+                                <button class="custom-select-toggle" type="button" aria-haspopup="listbox" aria-expanded="false">
+                                    <span>محبوب‌ترین</span><i class="fas fa-chevron-down" aria-hidden="true"></i>
+                                </button>
+                                <ul class="custom-select-menu" role="listbox">
+                                    <li role="option" aria-selected="true" data-value="popular"><i class="fas fa-fire"></i> محبوب‌ترین</li>
+                                    <li role="option" aria-selected="false" data-value="new"><i class="fas fa-sparkles"></i> جدیدترین</li>
+                                    <li role="option" aria-selected="false" data-value="cheap"><i class="fas fa-arrow-down"></i> ارزان‌ترین</li>
+                                    <li role="option" aria-selected="false" data-value="expensive"><i class="fas fa-arrow-up"></i> گران‌ترین</li>
+                                </ul>
+                            </div>
+                            <input class="custom-select-native" type="hidden" name="sort_as" value="popular">
+                        </label>
+                    </div>
+                </form>
+                <ul class="catalog-products" id="products-container">
+                    <li data-title="زعفران نگین یک مثقالی" data-category="زعفران">
+                        <article class="store-card"><div class="product-visual"><span class="product-badge">پرفروش</span><button class="favorite" type="button" aria-label="افزودن به علاقه‌مندی‌ها"><i class="far fa-heart"></i></button><img src="public/images/products/12/thumb_product.jpg" alt="زعفران نگین یک مثقالی"></div><div class="product-info"><span class="product-brand">زعفران قائنات</span><h3>زعفران نگین یک مثقالی</h3><div class="rating"><i class="fas fa-star"></i> ۴.۸ <span>(۱۲ دیدگاه)</span></div><div class="price-row"><div><span class="old-price">۷۸۰,۰۰۰ تومان</span><span class="price">۶۹۰,۰۰۰ تومان</span></div><button class="add-button" type="button" aria-label="افزودن به سبد خرید"><i class="fas fa-plus"></i></button></div></div></article>
+                    </li>
+                    <li data-title="زعفران سرگل نیم مثقالی" data-category="زعفران">
+                        <article class="store-card"><div class="product-visual"><span class="product-badge">ویژه</span><button class="favorite" type="button" aria-label="افزودن به علاقه‌مندی‌ها"><i class="far fa-heart"></i></button><img src="public/images/gallery/thumb_1707725745260933170.jpg" alt="زعفران سرگل نیم مثقالی"></div><div class="product-info"><span class="product-brand">زعفران قائنات</span><h3>زعفران سرگل نیم مثقالی</h3><div class="rating"><i class="fas fa-star"></i> ۴.۶ <span>(۸ دیدگاه)</span></div><div class="price-row"><div><span class="old-price">۴۲۰,۰۰۰ تومان</span><span class="price">۳۸۵,۰۰۰ تومان</span></div><button class="add-button" type="button" aria-label="افزودن به سبد خرید"><i class="fas fa-plus"></i></button></div></div></article>
+                    </li>
+                    <li data-title="پک هدیه طلای سرخ قائنات" data-category="پک">
+                        <article class="store-card"><div class="product-visual"><button class="favorite" type="button" aria-label="افزودن به علاقه‌مندی‌ها"><i class="far fa-heart"></i></button><img src="public/images/gallery/thumb_1707725756193416341.jpg" alt="پک هدیه طلای سرخ قائنات"></div><div class="product-info"><span class="product-brand">پک هدیه</span><h3>پک هدیه طلای سرخ قائنات</h3><div class="rating"><i class="fas fa-star"></i> ۴.۹ <span>(۲۱ دیدگاه)</span></div><div class="price-row"><div><span class="price">۱,۱۵۰,۰۰۰ تومان</span></div><button class="add-button" type="button" aria-label="افزودن به سبد خرید"><i class="fas fa-plus"></i></button></div></div></article>
+                    </li>
+                    <li data-title="زرشک پفکی ممتاز" data-category="زرشک">
+                        <article class="store-card"><div class="product-visual"><span class="product-badge">تازه</span><button class="favorite" type="button" aria-label="افزودن به علاقه‌مندی‌ها"><i class="far fa-heart"></i></button><img src="public/images/blogs/34/1707833391.jpg" alt="زرشک پفکی ممتاز"></div><div class="product-info"><span class="product-brand">زرشک خراسان</span><h3>زرشک پفکی ممتاز ۲۵۰ گرمی</h3><div class="rating"><i class="fas fa-star"></i> ۴.۷ <span>(۱۵ دیدگاه)</span></div><div class="price-row"><div><span class="price">۲۹۵,۰۰۰ تومان</span></div><button class="add-button" type="button" aria-label="افزودن به سبد خرید"><i class="fas fa-plus"></i></button></div></div></article>
+                    </li>
+                </ul>
+                <div class="catalog-pagination"><span class="active">۱</span><span>۲</span><span>۳</span><span><i class="fas fa-chevron-left"></i></span></div>
+                <div id="pagination" class="d-none">
+                    <span onclick="getProduct(current_page-1)" class="prev ml-1">صفحه قبل</span>
+                    <ul class="p-0 m-0"></ul>
+                    <span onclick="getProduct(current_page+1)" class="next mr-1">صفحه بعد</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    var current_page = 1;
+    var last_page;
+
+    getProduct(current_page);
+    $("#form_product #dosearch_btn").click(function () {
+        getProduct();
+    });
+    $("#form_product .custom-select-native").change(function () {
+        getProduct();
+    });
+
+    function getProduct(page = 1) {
+        current_page = page;
+        if (current_page <= 1) {
+            current_page = 1;
+        }
+        if (typeof last_page != 'undefined' && current_page > last_page) {
+            current_page = last_page;
+        }
+
+        var paginationUl = $("#pagination ul");
+        var paginationLi = paginationUl.find('li');
+        var porductContainer = $("ul#products-container");
+        var form = $("#form_product");
+        var data = form.serializeArray();
+
+        data.push({'name': 'current_page', 'value': current_page});
+
+        $.ajax({
+            url: "products/getproduct",
+            method: "POST",
+            data: data,
+            dataType: "JSON",
+            success: function (data) {
+                var outpot = '';
+                var products = data.products;
+                $.each(products, function (index, value) {
+                    var price = parseInt(value['price']).toLocaleString();
+                    var price_total = parseInt(value['price_total']).toLocaleString();
+                    outpot +=
+                        `
+                        <li class="col-12 col-md-4 col-lg-3 p-1">
+                            <a href="product/index/${value['id']}" class="d-block w-100">
+                                <div class="card justify-content-between w-100 h-100">
+                                    <div class="right">
+                                        <img class="card-img-top mb-2" src="public/images/products/${value['id']}/thumb_product.jpg"
+                                             alt="Card image cap">
+                                        <div class="card-body1 p-2">
+                                            <div class="stars position-relative">
+                                                <span class="score font-sm font-weight-bold position-absolute">${value['point']} از 5</span>
+                                                <div class="gray position-relative mr-auto">
+                                                    <div class="red position-absolute" style="width: ${value['pointPercent']}%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="left pb-2">
+                                        <div class="card-body2 p-2 h-100 d-flex flex-column">
+                                            <p class="title font-weight-bold text-right mt-3">${value['title']}</p>
+                                            <div class="description">${value['introduction']}</div>
+                                            <div class="price_shop_product d-flex justify-content-between align-items-center mt-auto">
+                                                <div class="price_product">
+                                                    <p class="price_red p-0 mb-2">${price} تومان</p>
+                                                    <p class="price_green p-0 m-0">${price_total} تومان</p>
+                                                </div>
+                                                <div class="icon_add_to_cart mt-2">
+                                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        `;
+                })
+                porductContainer.html(outpot);
+
+                // for pagination ...
+                var pageCount = data.page_count;
+                last_page = pageCount;
+                var liOutputs = '';
+                if (pageCount > 5) {
+                    var pointStart = '';
+                    var pointEnd = '';
+                    var LiStart = '';
+                    var LiEnd = '';
+
+                    if (current_page <= pageCount - 5) {
+                        pointEnd = '<li>...</li>';
+                    }
+
+                    if (current_page >= 5) {
+                        pointStart = '<li>...</li>';
+                    }
+                    if (current_page == 3) {
+                        LiStart = `<li onclick="getProduct(2)">2</li>`;
+                    } else if (current_page > 3) {
+                        LiStart = `<li onclick="getProduct(${current_page - 2})">${current_page - 2}</li>
+                                <li onclick="getProduct(${current_page - 1})">${current_page - 1}</li>`;
+                    }
+
+                    if (current_page == pageCount - 2) {
+                        LiEnd = `<li onclick="getProduct(${pageCount - 1})">${pageCount - 1}</li>`;
+                    } else if (current_page == pageCount - 3) {
+                        LiEnd = `<li onclick="getProduct(${pageCount}-2)">${pageCount - 2}</li>
+                            <li onclick="getProduct(${pageCount}-1)">${pageCount - 1}</li>`;
+                    } else if (current_page < pageCount - 3) {
+                        LiEnd = `<li onclick="getProduct(${current_page + 1})">${current_page + 1}</li>
+                            <li onclick="getProduct(${current_page + 2})">${current_page + 2}</li>
+                            <li onclick="getProduct(${current_page + 3})">${current_page + 3}</li>`;
+                    }
+
+                    var current_page_li = '';
+                    if (current_page != pageCount && current_page != 1) {
+                        current_page_li = `<li onclick="getProduct(${current_page})">${current_page}</li>`;
+                    }
+
+                    liOutputs +=
+                        `
+                        <li onclick="getProduct(1)">1</li>
+                        ${pointStart}
+                        ${LiStart}
+                        ${current_page_li}
+                        ${LiEnd}
+                        ${pointEnd}
+                        <li onclick="getProduct(${pageCount})">${pageCount}</li>
+                        `;
+
+                    paginationUl.html(liOutputs);
+
+                    var paginationUl_aft = $("#pagination ul");
+                    var paginationLi_aft = paginationUl_aft.find('li');
+                    $.each(paginationLi_aft, function (index, val) {
+                        var textLi = $(this).html();
+                        if (textLi == current_page) {
+                            $(this).addClass('active');
+                        }
+                    })
+                } else {
+                    for (var i = 1; i <= pageCount; i++) {
+                        liOutputs += `
+                                    <li onclick="getProduct(${i})">${i}</li>
+                                    `;
+                    }
+                    paginationUl.html(liOutputs);
+                    var paginationUl_aft = $("#pagination ul");
+                    var paginationLi_aft = paginationUl_aft.find('li');
+                    $.each(paginationLi_aft, function (index, val) {
+                        var textLi = $(this).html();
+                        if (textLi == current_page) {
+                            $(this).addClass('active');
+                        }
+                    })
+                }
+            }
+        });
+    }
+
+</script><!-- CATALOG SCRIPT -->
+<script>
+    (function () {
+        var searchInput = document.querySelector('.catalog-search input');
+        var sortSelect = document.querySelector('.catalog-sort .custom-select-native');
+        var customSelect = document.querySelector('.custom-select');
+        var customToggle = customSelect.querySelector('.custom-select-toggle');
+        var customOptions = customSelect.querySelectorAll('[role="option"]');
+        var cards = Array.from(document.querySelectorAll('#products-container > li'));
+        function refreshCatalog() {
+            var term = (searchInput.value || '').trim();
+            cards.forEach(function (card) {
+                card.hidden = term && !card.dataset.title.includes(term) && !card.dataset.category.includes(term);
+            });
+            var visible = cards.filter(function (card) { return !card.hidden; });
+            if (sortSelect.value === 'cheap' || sortSelect.value === 'expensive') {
+                visible.sort(function (a, b) {
+                    var aPrice = parseInt(a.querySelector('.price').textContent.replace(/[^0-9]/g, ''), 10);
+                    var bPrice = parseInt(b.querySelector('.price').textContent.replace(/[^0-9]/g, ''), 10);
+                    return sortSelect.value === 'cheap' ? aPrice - bPrice : bPrice - aPrice;
+                }).forEach(function (card) { document.querySelector('#products-container').appendChild(card); });
+            }
+        }
+        searchInput.addEventListener('input', refreshCatalog);
+        sortSelect.addEventListener('change', refreshCatalog);
+        customToggle.addEventListener('click', function () {
+            var isOpen = customSelect.classList.toggle('is-open');
+            customToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+        customOptions.forEach(function (option) {
+            option.addEventListener('click', function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+                sortSelect.value = option.dataset.value;
+                customToggle.querySelector('span').textContent = option.textContent.trim();
+                customOptions.forEach(function (item) { item.setAttribute('aria-selected', 'false'); });
+                option.setAttribute('aria-selected', 'true');
+                customSelect.classList.remove('is-open');
+                customToggle.setAttribute('aria-expanded', 'false');
+                sortSelect.dispatchEvent(new Event('change', { bubbles: true }));
+                window.requestAnimationFrame(function () {
+                    customSelect.classList.remove('is-open');
+                    customToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        });
+        document.addEventListener('click', function (event) {
+            if (!customSelect.contains(event.target)) {
+                customSelect.classList.remove('is-open');
+                customToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+        document.querySelectorAll('.category-list button').forEach(function (button) {
+            button.addEventListener('click', function () {
+                document.querySelectorAll('.category-list button').forEach(function (item) { item.classList.remove('active'); });
+                button.classList.add('active');
+                var category = button.textContent.trim().split(' ')[0];
+                searchInput.value = category === 'همه' ? '' : category;
+                refreshCatalog();
+                if (window.matchMedia('(max-width: 600px)').matches) {
+                    filterPanel.classList.remove('is-open');
+                    filterToggle.setAttribute('aria-expanded', 'false');
+                    filterToggle.querySelector('.filter-toggle-text').textContent = button.textContent.trim();
+                }
+            });
+        });
+        var filterToggle = document.querySelector('.filter-toggle');
+        var filterPanel = document.querySelector('.catalog-filter-panel');
+        filterToggle.addEventListener('click', function () {
+            var isOpen = filterPanel.classList.toggle('is-open');
+            filterToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    }());
+</script>
+
+<!-- FOOTER -->
+<footer class="storefront-shell-footer">
+    <div class="storefront-shell-inner">
+        <div class="storefront-shell-trust">
+            <div><i class="fas fa-shield-alt"></i><span><strong>خرید مطمئن</strong><small>تضمین اصالت محصولات</small></span></div>
+            <div><i class="fas fa-truck-fast"></i><span><strong>ارسال سریع</strong><small>بسته‌بندی امن تا درب خانه</small></span></div>
+            <div><i class="fas fa-headset"></i><span><strong>پشتیبانی واقعی</strong><small>همراه شما در تمام مسیر خرید</small></span></div>
+        </div>
+        <div class="storefront-shell-footer-main">
+            <div class="storefront-shell-footer-brand">
+                <img src="public/images/logo.png" alt="نشان سوغات قاینات">
+                <h2>سوغات قاینات</h2>
+                <p>انتخاب اصیل زعفران و سوغات خراسان جنوبی، مستقیم از دل مزارع قائنات.</p>
+                <div class="storefront-shell-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3>دسترسی سریع</h3>
+                <a href="index.html">صفحه اصلی</a>
+                <a href="products.html">محصولات</a>
+                <a href="gallery.html">گالری تصاویر</a>
+                <a href="about.html">درباره ما</a>
+            </div>
+            <div>
+                <h3>راهنمای خرید</h3>
+                <a href="transport.html">روش‌های ارسال</a>
+                <a href="showcart.html">سبد خرید</a>
+                <a href="contact.html">پشتیبانی</a>
+                <a href="review.html">نظرات مشتریان</a>
+            </div>
+            <div>
+                <h3>با ما در تماس باشید</h3>
+                <p>۰۵۶-۳۲۲۲۲۲۲۲</p>
+                <p>info@example.com</p>
+                <p>هر روز، ۲۴ ساعته</p>
+            </div>
+        </div>
+        <div class="storefront-shell-footer-bottom">© تمامی حقوق برای سوغات قاینات محفوظ است.</div>
+    </div>
+</footer>
+
+</body>
+</html>

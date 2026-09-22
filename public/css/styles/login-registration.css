@@ -1,0 +1,189 @@
+
+.input-container input {
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+.input-container input {
+    border-radius: 5px !important;
+    padding: 21px 40px 21px 0;
+    font-size: 14px;
+}
+
+.input-container input::placeholder {
+    color: #aaa;
+}
+
+.input-container .input-group-text {
+    position: absolute;
+    z-index: 999;
+    padding: 13px 12px;
+    background: transparent;
+    border: none;
+    color: #1bbef5;
+}
+
+.google-login {
+    border-top: 1px solid #ffe9e9;
+    padding: 35px 30px 23px;
+    margin-top: 35px;
+}
+
+.google-plus-btn {
+    background-color: #f32e06;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.forget-password {
+    padding-top: 24px;
+    display: block;
+}
+
+.forget-password i {
+    font-size: 26px;
+    vertical-align: -7px;
+    color: #1bbef5;
+}
+
+
+/* Hide the browser's default checkbox */
+.container-checkbox input {
+    position: absolute;
+    opacity: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark-login {
+    position: absolute;
+    top: -2px;
+    right: -3px;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox:hover input ~ .checkmark-login {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox input:checked ~ .checkmark-login {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark-login:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Style the checkmark/indicator */
+.checkbox .checkmark-login:after {
+    left: 8px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Show the checkmark when checked */
+.checkbox input:checked ~ .checkmark-login:after {
+    display: block;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox input {
+    opacity: 0;
+    position: absolute;
+}
+
+label.checkbox-container {
+    margin-right: 10px;
+}
+
+#panel-login-heading, #panel-register-heading {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    background: #03A9F4;
+    color: #fff;
+    margin-bottom: 22px;
+}
+
+#login-card {
+    border: 1px solid #17a2b8;
+}
+
+#register-card {
+    border: 1px solid #2ecc71;
+}
+
+input[type="password"] {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+button.btn.btn-outline-secondary {
+    background: #bceeff;
+    color: #555;
+}
+
+.showError{
+    display: none;
+}
+/* ---------- Minimal/modern overrides ---------- */
+#login-card, #register-card {
+    border: 1px solid var(--line) !important;
+    border-radius: var(--radius) !important;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+#panel-login-heading, #panel-register-heading {
+    font-size: 1rem;
+    font-weight: 700;
+    background: var(--paper) !important;
+    color: var(--ink) !important;
+    border-bottom: 1px solid var(--line);
+    padding: 1.1rem 1rem;
+    margin-bottom: 0;
+}
+.input-container input {
+    border-radius: var(--radius-sm) !important;
+    border: 1px solid var(--line-strong);
+    background: var(--paper);
+}
+.input-container input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.input-container .input-group-text, .forget-password i {
+    color: var(--accent-ink);
+}
+.checkbox input:checked ~ .checkmark-login {
+    background-color: var(--accent);
+}
+.checkbox:hover input ~ .checkmark-login {
+    background-color: var(--line-strong);
+}
+button.btn.btn-outline-secondary {
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+    border-radius: var(--radius-sm);
+    border: 0;
+}
+.google-plus-btn {
+    background-color: var(--danger);
+    border-radius: var(--radius-sm);
+}
+.google-login { border-top: 1px solid var(--line); }

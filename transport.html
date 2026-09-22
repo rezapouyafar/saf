@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>فروشگاه اینترنتی زعفران قائن</title>
+    <!-- Required meta tags -->
+    <base href="./">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="public/images/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="public/css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="public/css/slick.css">
+    <link rel="stylesheet" href="public/css/slick-theme.css">
+    <link rel="stylesheet" href="public/css/flipTimer.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/redesign.css">
+    <link rel="stylesheet" href="public/css/storefront-shell.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+          integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="public/js/jquery.js"></script>
+    <script src="public/js/bootstrap.bundle.js"></script>
+    <script src="public/js/bootstrap.js"></script>
+    <script src="public/js/jquery.bootstrap-show-password.js"></script>
+    <script src="public/js/slick.js"></script>
+    <script src="public/js/jquery.flipTimer.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="public/js/frotel/ostan.js"></script>
+    <script src="public/js/frotel/city.js"></script>
+    <script src="public/js/script.js"></script>
+</head>
+<body class="checkout-page">
+<!-- CONTENT -->
+<main class="checkout-shell">
+    <div class="container_me">
+        <div class="checkout-header">
+            <span class="eyebrow">تکمیل خرید</span>
+            <h1>انتخاب آدرس و ارسال</h1>
+        </div>
+
+        <div class="checkout-progress" aria-label="مراحل خرید">
+            <div class="progress-step is-complete">
+                <span class="step-bullet">1</span>
+                <span class="step-label">سبد خرید</span>
+            </div>
+            <div class="progress-step is-active">
+                <span class="step-bullet">2</span>
+                <span class="step-label">آدرس و ارسال</span>
+            </div>
+            <div class="progress-step">
+                <span class="step-bullet">3</span>
+                <span class="step-label">بازبینی سفارش</span>
+            </div>
+            <div class="progress-step">
+                <span class="step-bullet">4</span>
+                <span class="step-label">پرداخت</span>
+            </div>
+        </div>
+
+        <div class="checkout-grid">
+            <section class="checkout-panel">
+                <div class="panel-header">
+                    <h2>آدرس تحویل</h2>
+                    <button type="button" class="soft-button">افزودن آدرس جدید</button>
+                </div>
+
+                <div class="address-list">
+                    <article class="address-card selected" tabindex="0">
+                        <div class="address-card-head">
+                            <span class="badge">آدرس اصلی</span>
+                            <strong>علی رضایی</strong>
+                        </div>
+                        <div class="address-card-body">
+                            <p><span>استان:</span> خراسان جنوبی</p>
+                            <p><span>شهر:</span> قائن</p>
+                            <p><span>آدرس:</span> خیابان امام، کوچه بهار، پلاک ۱۲</p>
+                            <p><span>کد پستی:</span> ۹۷۶۱۶۱۱۱۱۱</p>
+                        </div>
+                        <div class="address-card-foot">
+                            <span>شماره تماس اضطراری: ۰۹۱۲۰۰۰۰۰۰۰</span>
+                            <span>تلفن ثابت: ۰۵۶۳۲۲۲۲۲۲۲</span>
+                        </div>
+                    </article>
+
+                    <article class="address-card" tabindex="0">
+                        <div class="address-card-head">
+                            <span class="badge">آدرس جایگزین</span>
+                            <strong>مریم رضایی</strong>
+                        </div>
+                        <div class="address-card-body">
+                            <p><span>استان:</span> خراسان جنوبی</p>
+                            <p><span>شهر:</span> بیرجند</p>
+                            <p><span>آدرس:</span> بلوار مدرس، کوچه دانش، پلاک ۲۵</p>
+                            <p><span>کد پستی:</span> ۹۶۱۶۵۶۵۶۶</p>
+                        </div>
+                        <div class="address-card-foot">
+                            <span>شماره تماس اضطراری: ۰۹۳۵۵۵۵۵۵۵۵</span>
+                            <span>تلفن ثابت: ۰۵۶۳۲۲۲۲۲۲۲</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <aside class="summary-card">
+                <h3>خلاصه سفارش</h3>
+                <div class="summary-row">
+                    <span>جمع جزء</span>
+                    <strong>۱,۹۸۰,۰۰۰ تومان</strong>
+                </div>
+                <div class="summary-row">
+                    <span>هزینه ارسال</span>
+                    <strong>۳۰,۰۰۰ تومان</strong>
+                </div>
+                <div class="summary-row">
+                    <span>تخفیف</span>
+                    <strong>۰ تومان</strong>
+                </div>
+                <div class="summary-total">
+                    <span>مبلغ نهایی</span>
+                    <strong>۲,۰۱۰,۰۰۰ تومان</strong>
+                </div>
+            </aside>
+        </div>
+
+        <section class="checkout-panel shipping-panel">
+            <div class="panel-header">
+                <h2>شیوه ارسال</h2>
+            </div>
+
+            <div class="shipping-list">
+                <article class="shipping-option selected" tabindex="0">
+                    <div class="shipping-radio"></div>
+                    <div class="shipping-icon"><i class="fas fa-box"></i></div>
+                    <div class="shipping-copy">
+                        <h3>پست پیشتاز</h3>
+                        <p>تحویل طی ۲ تا ۳ روز کاری</p>
+                    </div>
+                    <div class="shipping-price">۳۰,۰۰۰ تومان</div>
+                </article>
+
+                <article class="shipping-option" tabindex="0">
+                    <div class="shipping-radio"></div>
+                    <div class="shipping-icon"><i class="fas fa-truck-fast"></i></div>
+                    <div class="shipping-copy">
+                        <h3>پست سفارشی</h3>
+                        <p>تحویل طی ۴ تا ۶ روز کاری</p>
+                    </div>
+                    <div class="shipping-price">۲۵,۰۰۰ تومان</div>
+                </article>
+            </div>
+        </section>
+
+        <div class="checkout-actions">
+            <a href="showcart.html" class="secondary-btn">بازگشت به سبد خرید</a>
+            <a href="review.html" class="primary-btn">ثبت اطلاعات و ادامه خرید</a>
+        </div>
+    </div>
+</main>
+
+<script>
+    document.querySelectorAll('.address-card').forEach(function (card) {
+        card.addEventListener('click', function () {
+            document.querySelectorAll('.address-card').forEach(function (item) {
+                item.classList.remove('selected');
+            });
+            card.classList.add('selected');
+        });
+    });
+
+    document.querySelectorAll('.shipping-option').forEach(function (option) {
+        option.addEventListener('click', function () {
+            document.querySelectorAll('.shipping-option').forEach(function (item) {
+                item.classList.remove('selected');
+            });
+            option.classList.add('selected');
+        });
+    });
+</script>
+
+<script>
+    var editAddressId = '';
+    loadOstan('ostan');
+    $('#ostan').change(function () {
+        var i = $(this).find('option:selected').val();
+        ldMenu(i, 'city');
+    })
+
+    function showWindow() {
+        $('h5.modal-title').text("افزودن آدرس جدید");
+        $('form#addressForm').trigger('reset');
+        $('#ostan').val(-1);
+        ldMenu(-1, 'city');
+        editAddressId = '';
+    }
+
+    $('.address table.table td.first').click(function () {
+        $('.address table.table').removeClass('active');
+        $(this).parents('table').addClass('active');
+        getPostPrice();
+    });
+
+    /* getPostPrice();
+    function getPostPrice() {
+        var activeAddressTable = $('.address table.active');
+        var cityId = activeAddressTable.attr('data-city')
+        var addressId = activeAddressTable.attr('data-id');
+
+        $('#post_price1').text('...');
+        $('#post_price2').text('...');
+        $.ajax({
+            url: "transport/getpostprice",
+            method: "POST",
+            data: {"addressId": addressId, 'cityId': cityId},
+            dataType: "JSON",
+            success: function (data) {
+                var pishtaz = data['pishtaz'];
+                var sefareshi = data['sefareshi'];
+                $('#post_price1').text(pishtaz);
+                $('#post_price2').text(sefareshi);
+            }
+        })
+    } */
+
+    $('.send_types table.table td.first').click(function () {
+        $('.send_types table.table').removeClass('active');
+        $(this).parents('table').addClass('active');
+        sessionPostType();
+    });
+
+    sessionPostType();
+    function sessionPostType() {
+        var postTypeId = $('.send_types table.active').attr('data-post-type');
+        $.ajax({
+            url: '/saffron/static-html/transport/sessionposttype',
+            method: 'post',
+            data: {'postTypeId': postTypeId},
+            success: function (data) {
+                console.log(data);
+                $btnNextLevel = $('.next-level');
+               if (data == 1){
+                   $btnNextLevel.removeClass('disabled');
+               }else {
+                   $btnNextLevel.addClass('disabled');
+               }
+            }
+        })
+    }
+
+    function editAddress(addressId) {
+        editAddressId = addressId;
+        $.ajax({
+            url: "transport/editaddress",
+            method: "POST",
+            data: {"addressId": addressId},
+            dataType: "JSON",
+            success: function (data) {
+                $('input[name=family]').val(data['family']);
+                $('input[name=mobile]').val(data['mobile']);
+                $('input[name=tel]').val(data['tel']);
+                $('textarea[name=address]').val(data['address']);
+                $('input[name=codeposti]').val(data['codeposti']);
+                $('h5.modal-title').text("ویرایش آدرس");
+                var ostan = data['ostan'];
+                var city = data['city'];
+                $('#ostan option').each(function (index) {
+                    var value_ostan = $(this).val();
+                    if (value_ostan == ostan) {
+                        $(this).attr('selected', 'selected');
+                        ldMenu(ostan, 'city');
+                    }
+                })
+
+                $('#city option').each(function (index) {
+                    var value_city = $(this).val();
+                    if (value_city == city) {
+                        $(this).attr('selected', 'selected');
+                    }
+                })
+            }
+        })
+    }
+
+    $("#addressForm").submit(function (e) {
+        e.preventDefault();
+        var addressAlert = $("#address_alert");
+        var data = $(this).serializeArray();
+        var ostanName = $("#ostan option:selected").text();
+        var cityName = $("#city option:selected").text();
+        data.push({'name': 'ostan_name', 'value': ostanName});
+        data.push({'name': 'city_name', 'value': cityName});
+        $.ajax({
+            url: "transport/saveaddress/" + editAddressId,
+            method: "POST",
+            data: data,
+            dataType: "JSON",
+            success: function (data) {
+                console.log(data)
+                var output = '';
+                $.each(data.errors, function (index, value) {
+                    output += `<p class="m-1 font-sm">- ${value}</p>`;
+                });
+                if (data.hasError == true) {
+                    addressAlert.html(output).addClass('alert-danger').removeClass('alert-success').slideDown();
+                } else {
+                    addressAlert.html(output).removeClass('alert-danger').addClass('alert-success').slideDown();
+                    setTimeout(function () {
+                        location.reload();
+                    }, 2000);
+                }
+            }
+        });
+    });
+</script>
+
+<!-- FOOTER -->
+<footer class="storefront-shell-footer">
+    <div class="storefront-shell-inner">
+        <div class="storefront-shell-trust">
+            <div><i class="fas fa-shield-alt"></i><span><strong>خرید مطمئن</strong><small>تضمین اصالت محصولات</small></span></div>
+            <div><i class="fas fa-truck-fast"></i><span><strong>ارسال سریع</strong><small>بسته‌بندی امن تا درب خانه</small></span></div>
+            <div><i class="fas fa-headset"></i><span><strong>پشتیبانی واقعی</strong><small>همراه شما در تمام مسیر خرید</small></span></div>
+        </div>
+        <div class="storefront-shell-footer-main">
+            <div class="storefront-shell-footer-brand">
+                <img src="public/images/logo.png" alt="نشان سوغات قاینات">
+                <h2>سوغات قاینات</h2>
+                <p>انتخاب اصیل زعفران و سوغات خراسان جنوبی، مستقیم از دل مزارع قائنات.</p>
+                <div class="storefront-shell-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3>دسترسی سریع</h3>
+                <a href="index.html">صفحه اصلی</a>
+                <a href="products.html">محصولات</a>
+                <a href="gallery.html">گالری تصاویر</a>
+                <a href="about.html">درباره ما</a>
+            </div>
+            <div>
+                <h3>راهنمای خرید</h3>
+                <a href="transport.html">روش‌های ارسال</a>
+                <a href="showcart.html">سبد خرید</a>
+                <a href="contact.html">پشتیبانی</a>
+                <a href="review.html">نظرات مشتریان</a>
+            </div>
+            <div>
+                <h3>با ما در تماس باشید</h3>
+                <p>۰۵۶-۳۲۲۲۲۲۲۲</p>
+                <p>info@example.com</p>
+                <p>هر روز، ۲۴ ساعته</p>
+            </div>
+        </div>
+        <div class="storefront-shell-footer-bottom">© تمامی حقوق برای سوغات قاینات محفوظ است.</div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>فروشگاه اینترنتی زعفران قائن</title>
+    <!-- Required meta tags -->
+    <base href="./">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../public/css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="../public/css/persianDatepicker-lightorang.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+          integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../public/js/jquery.js"></script>
+    <script src="../public/js/bootstrap.bundle.js"></script>
+    <script src="../public/js/bootstrap.js"></script>
+    <script src="../public/js/script.js"></script>
+    <script src="../public/js/ckeditor/ckeditor.js"></script>
+    <script src="../public/js/persianDatepicker.js"></script>
+</head>
+
+<body>
+<!-- HEADER -->
+<header class="container-fluid" id="admin-header">
+    <div class="row">
+        <div class="col-12 col-md-3 col-lg-2 p-0">
+            <div class="branding d-flex justify-content-center align-items-center h-100">
+                <img class="img-thumbnail border rounded-circle" src="../public/images/logo.png">
+                <span class="font-lg-bold pr-2 text-light">پنل مدیریت</span>
+            </div>
+        </div>
+        <div class="col-12 col-md-9 col-lg-10 p-0">
+            <div class="header-details h-100 d-flex justify-content-end align-items-center">
+                <ul class="d-flex m-0 ml-5 p-0">
+                                        <li class="nav-item dropdown ml-4">
+                        <a class="text-light" href="#" role="button" data-toggle="dropdown">
+                            <span class="alert-count">1</span>
+                            <span class="font-md"><i class="far fa-envelope"></i></span>
+                            <span class="font-md"><i class="fas fa-chevron-down"></i></span>
+                        </a>
+                                                    <div class="dropdown-menu h-auto p-0 border-0 ticket_notify" id="ticket_notify">
+                                                                    <a href="">
+                                        <div class="ticket border">
+                                            <div class="d-flex justify-content-between align-items-center p-2">
+                                                <div class="d-flex justify-content-center align-items-center img-notify">
+                                                    <img class="rounded-circle border border-secondary"
+                                                         src="../public/images/gravatar.png">
+                                                    <span class="font-sm text-secondary mr-2">مریم احمدی</span>
+                                                </div>
+                                                <span class="badge badge-danger p-1">مهم</span>
+                                            </div>
+                                            <p class="ticket-msg font-sm border-top p-2 m-0">پیگیری سفارش جدید</p>
+                                        </div>
+                                    </a>
+                                                                <a href="adminTickets-allTickets.html"
+                                   class="alert alert-danger m-0 font-sm py-1 text-center rounded-0 rounded-bottom d-block">مشاهد
+                                    تیکت ها...</a>
+                            </div>
+                                            </li>
+                    <li class="nav-item dropdown">
+                        <a class="text-light" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown">
+                            <span class="font-sm"><i class="fas fa-user"></i></span>
+                            <span class="font-md"><i class="fas fa-chevron-down"></i></span>
+                        </a>
+                        <div class="dropdown-menu h-auto">
+                            <a class="dropdown-item font-sm" href=""><span class="font-sm ml-2"><i
+                                            class="fas fa-undo"></i></span>بازگشت به سایت</a>
+                            <a class="dropdown-item font-sm" href="panel.html"><span class="font-sm ml-2"><i
+                                            class="fas fa-user"></i></span>پروفایل</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item font-sm" href="logout"><span class="font-sm ml-2"><i
+                                            class="fas fa-sign-out-alt"></i></span>خروج</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- MAIN -->
+<div class="container-fluid main" id="admin-main">
+    <div class="row position-relative">
+        <div class="hamburger-menu d-flex d-md-none p-1 rounded-top">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </div>
+        <div class="col-12 col-md-3 col-lg-2 p-0 d-md-block" id="sidebar">
+            <div>
+                <div class="user-image d-flex flex-column justify-content-center align-items-center p-3">
+                    <img class="border rounded-circle" src="../public/images/gravatar.png" alt="">
+                    <span class="font-md-bold text-white mt-3">علی رضایی</span>
+                </div>
+                <ul id="menu" class="p-0">
+                    <!-- DASHBOARD -->
+                    <li class="panel dashboard">
+                        <a href="adminDashboard.html"><span><i class="fas fa-tasks btn-group-vertical ml-2"></i></span>داشبور</a>
+                    </li>
+                    <!-- PRODUCTS -->
+                    <li class="panel">
+                        <a class="d-flex justify-content-between align-items-center font-md">
+                            <span><span><i class="fas fa-box-open btn-group-vertical ml-2"></i></span>محصولات</span>
+                            <span class="chevron btn-group-vertical"><i class="fas fa-chevron-down"></i></span>
+                        </a>
+                        <ul class="p-0">
+                            <li>
+                                <a class="font-sm "
+                                   href="adminProducts-allProducts.html"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>کل محصولات</a>
+                                <a class="font-sm "
+                                   href="adminProducts-addProduct.html"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>افزودن محصول جدید</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- CATEGORY -->
+                    <li class="panel">
+                        <a class="d-flex justify-content-between align-items-center font-md">
+                            <span><span><i class="fas fa-layer-group btn-group-vertical ml-2"></i></span>دسته ها</span>
+                            <span class="chevron btn-group-vertical"><i class="fas fa-chevron-down"></i></span>
+                        </a>
+                        <ul class="p-0">
+                            <li>
+                                <a class="font-sm "
+                                   href="adminCategories-allCategories.html"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>کل دسته ها</a>
+                                <a class="font-sm "
+                                   href="adminCategories-addCategory.html"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>افزودن دسته جدید</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- SITE SETTING -->
+                    <li class="panel">
+                        <a class="d-flex justify-content-between align-items-center font-md">
+                            <span><span><i class="fas fa-cogs btn-group-vertical ml-2"></i></span>تنظیمات سایت</span>
+                            <span class="chevron btn-group-vertical"><i class="fas fa-chevron-down"></i></span>
+                        </a>
+                        <ul class="p-0">
+                            <li>
+                                <a class="font-sm "
+                                   href="adminSetting/format"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>قالب</a>
+                                <a class="font-sm "
+                                   href="adminSetting/social"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>شبکه های اجتماعی</a>
+                                <a class="font-sm "
+                                   href="adminSetting-contact.html"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>اطلاعات تماس</a>
+                                <a class="font-sm "
+                                   href="adminSetting/limit"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>محدودیت ها و زمان</a>
+                                <a class="font-sm "
+                                   href="adminSetting/titles"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>توضیحات صفحه اصلی</a>
+                                <a class="font-sm "
+                                   href="adminSetting/about"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>توضیحات صفحه درباره ما</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- USERS -->
+                    <li class="panel">
+                        <a class="d-flex justify-content-between align-items-center font-md">
+                            <span><span><i class="fas fa-users btn-group-vertical ml-2"></i></span>کاربران</span>
+                            <span class="chevron btn-group-vertical"><i class="fas fa-chevron-down"></i></span>
+                        </a>
+                        <ul class="p-0">
+                            <li>
+                                <a class="font-sm "
+                                   href="adminUsers-allUsers.html"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>همه کاربران</a>
+                                <a class="font-sm "
+                                   href="adminUsers-addUser.html"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>ایجاد کاربر جدید(ویرایش)</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- TICKETS -->
+                    <li class="panel">
+                        <a class="d-flex justify-content-between align-items-center font-md">
+                            <span><span><i class="fas fa-ticket-alt btn-group-vertical ml-2"></i></span>تیکت ها</span>
+                            <span class="chevron btn-group-vertical"><i class="fas fa-chevron-down"></i></span>
+                        </a>
+                        <ul class="p-0">
+                            <li>
+                                <a class="font-sm "
+                                   href="adminTickets-allTickets.html"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>تیکت های کاربران</a>
+                                <a class="font-sm "
+                                   href="adminTickets/yourTickets"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>تیکت های شما</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- COMMENTS -->
+                    <li class="panel">
+                        <a class="d-flex justify-content-between align-items-center font-md">
+                            <span><span><i class="fas fa-comments btn-group-vertical ml-2"></i></span>نظرات</span>
+                            <span class="chevron btn-group-vertical"><i class="fas fa-chevron-down"></i></span>
+                        </a>
+                        <ul class="p-0">
+                            <li>
+                                <a class="font-sm "
+                                   href="adminComments-allComments.html"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>همه نظرات</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- GALLERY -->
+                    <li class="panel">
+                        <a class="d-flex justify-content-between align-items-center font-md">
+                            <span><span><i class="fas fa-images btn-group-vertical ml-2"></i></span>گالری</span>
+                            <span class="chevron btn-group-vertical"><i class="fas fa-chevron-down"></i></span>
+                        </a>
+                        <ul class="p-0">
+                            <li>
+                                <a class="font-sm "
+                                   href="adminGallery-gallery.html"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>تصاویر گالری</a>
+                                <a class="font-sm "
+                                   href="adminGallery-addPhoto.html"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>افزودن تصویر</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- BLOGS -->
+                    <li class="panel">
+                        <a class="d-flex justify-content-between align-items-center font-md">
+                            <span><span><i class="fas fa-rss-square btn-group-vertical ml-2"></i></span>وبلاگ ها</span>
+                            <span class="chevron btn-group-vertical"><i class="fas fa-chevron-down"></i></span>
+                        </a>
+                        <ul class="p-0">
+                            <li>
+                                <a class="font-sm "
+                                   href="adminBlogs-allBlogs.html"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>کل وبلاگ ها</a>
+                                <a class="font-sm "
+                                   href="adminBlogs-addBlog.html"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>افزودن(ویرایش) وبلاگ جدید</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- TRANSACTION -->
+                    <li class="panel">
+                        <a class="d-flex justify-content-between align-items-center font-md">
+                            <span><span><i class="fas fa-search-dollar btn-group-vertical ml-2"></i></span>تراکنش ها</span>
+                            <span class="chevron btn-group-vertical"><i class="fas fa-chevron-down"></i></span>
+                        </a>
+                        <ul class="p-0">
+                            <li>
+                                <a class="font-sm "
+                                   href="adminTransactions-allTransactions.html"><span
+                                            class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>مشاهده تراکنش ها</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- DISCOUNT CODE -->
+                    <li class="panel">
+                        <a class="d-flex justify-content-between align-items-center font-md">
+                            <span><span><i class="fas fa-percentage btn-group-vertical ml-2"></i></span>کدهای تخفیف</span>
+                            <span class="chevron btn-group-vertical"><i class="fas fa-chevron-down"></i></span>
+                        </a>
+                        <ul class="p-0">
+                            <li>
+                                <a class="font-sm "
+                                   href="adminDiscountCodes-allDiscountCodes.html"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>کل کدهای تخفیف</a>
+                                <a class="font-sm "
+                                   href="adminDiscountCodes-addDiscountCode.html"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>افزودن(ویرایش) کد تخفیف</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- GIFT CODE -->
+                    <li class="panel">
+                        <a class="d-flex justify-content-between align-items-center font-md">
+                            <span><span><i class="fas fa-gifts btn-group-vertical ml-2"></i></span>کارت های هدیه</span>
+                            <span class="chevron btn-group-vertical"><i class="fas fa-chevron-down"></i></span>
+                        </a>
+                        <ul class="p-0">
+                            <li>
+                                <a class="font-sm "
+                                   href="adminGiftCards-allGiftCards.html"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>کل کارت های هدیه</a>
+                                <a class="font-sm "
+                                   href="adminGiftCards-addGiftCard.html"><span class="chevron btn-group-vertical ml-2"><i
+                                                class="fas fa-chevron-left"></i></span>افزودن(ویرایش) کارت هدیه</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-12 col-md-9 col-lg-10 p-0" id="content">
+            <!-- main -->
+
+
+<div class="admin-content p-4">
+    <h3 class="pb-3 mb-4">همه تیکت ها</h3>
+    <div class="table-content rounded p-2 bg-white">
+        <form action="adminTickets/getTickets/all" method="post" class="form-inline">
+            <div class="d-flex justify-content-between align-items-center py-2 px-3 w-100">
+                <div class="searching">
+                    <input type="text" class="form-control form-control-sm" name="search" placeholder="جستجو...">
+                    <input type="button" value="بگرد"
+                           class="submitForm form-control form-control-sm bg-info text-white mr-2">
+                </div>
+                <div class="print-section">
+                    <button type="submit" name="deleteTickets"
+                            class="alert alert-danger d-inline-block text-danger m-0">
+                        حذف کلی
+                    </button>
+                    <button class="alert alert-info d-inline-block text-info m-0 print-button">چاپ</button>
+                </div>
+            </div>
+            <div class="table-responsive">
+            <table class="table table-striped text-center">
+                <thead>
+                <tr>
+                    <th><input type="checkbox" class="checkAll"></th>
+                    <th>نام و نام خانوادگی</th>
+                    <th>ایمیل</th>
+                    <th>عنوان</th>
+                    <th>تاریخ</th>
+                    <th>جزئیات</th>
+                    <th>عملیات</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input type="checkbox" name="ids[]" value="1"></td>
+                    <td>علی احمدی</td>
+                    <td>ali@example.com</td>
+                    <td>پیگیری سفارش</td>
+                    <td>1402/12/10</td>
+                    <td><img src="../public/images/details.png" width="40" height="40"></td>
+                    <td>
+                        <a href="#" class="btn-small alert alert-danger d-inline-block text-danger m-0">حذف</a>
+                        <a href="#" class="btn-small alert alert-info d-inline-block text-info m-0">جواب</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="ids[]" value="2"></td>
+                    <td>زهرا محمدی</td>
+                    <td>zahra@example.com</td>
+                    <td>مشکل در پرداخت</td>
+                    <td>1402/11/28</td>
+                    <td><img src="../public/images/details.png" width="40" height="40"></td>
+                    <td>
+                        <a href="#" class="btn-small alert alert-danger d-inline-block text-danger m-0">حذف</a>
+                        <a href="#" class="btn-small alert alert-info d-inline-block text-info m-0">جواب</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="ids[]" value="3"></td>
+                    <td>محمد رضایی</td>
+                    <td>mohammad@example.com</td>
+                    <td>سوال درباره محصول</td>
+                    <td>1402/10/15</td>
+                    <td><img src="../public/images/details.png" width="40" height="40"></td>
+                    <td>
+                        <a href="#" class="btn-small alert alert-danger d-inline-block text-danger m-0">حذف</a>
+                        <a href="#" class="btn-small alert alert-info d-inline-block text-info m-0">جواب</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+        </form>
+    </div>
+    <nav aria-label="Page navigation example" class="my-3">
+        <ul class="pagination justify-content-center align-items-center m-0"></ul>
+    </nav>
+</div>
+
+<script>
+    var current_page = 1;
+    var last_page;
+    loadData(current_page);
+    $(".submitForm").click(function () {
+        loadData();
+    });
+
+    function loadData(page = 1) {
+        current_page = page;
+        if (current_page <= 1) {
+            current_page = 1;
+        }
+        if (typeof last_page != 'undefined' && current_page > last_page) {
+            current_page = last_page;
+        }
+
+        var form = $('form');
+        var search = form.find('input[name=search]').val();
+        var tableContainer = $("table tbody");
+        var paginationContainer = $("ul.pagination");
+        $.ajax({
+            url: form.attr("action"),
+            method: "POST",
+            data: {'search': search, 'current_page': current_page},
+            dataType: "JSON",
+            success: function (data) {
+                console.log(data);
+                var outpot = '';
+                var tickets = data.tickets;
+                $.each(tickets, function (index, value) {
+                    var responses = value['response'];
+                    var resOutpot = '';
+                    $.each(responses, function (ind, val) {
+                        resOutpot += `
+                        <div class="response border rounded p-3 mt-3 shadow-sm">
+                            <div class="top d-flex justify-content-between align-items-center pl-3">
+                                <div>
+                                    <img class="rounded-circle border img-thumbnail" src="../public/images/gravatar.png" width="50" height="50" alt="">
+                                    <span class="mr-3 font-sm-bold text-info">${val['family']}</span>
+                                </div>
+                                <div>
+                                    <span class="badge badge-danger">${val['date']}</span>
+                                </div>
+                            </div>
+                            <div class="response-container position-relative bottom text-right bg-secondary p-3 pl-5 mt-2 text-light">
+                                <div class="response-text" data-response="${val['description']}">
+                                    ${val['description']}
+                                </div>
+                                <div class="action-response position-absolute d-flex flex-column justify-content-center align-items-center font-md">
+                                    <a href="adminTickets/deleteResponse/${val['id']}" class="delete-response text-danger"><i class="fas fa-trash"></i></a>
+                                    <a class="edit-response cur_pointer text-info" onclick="showEditForm(this,${val['id']})"><i class="fas fa-edit"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        `;
+                    })
+
+                    var checked = value['checked'];
+                    var newTicket = '';
+                    if (checked == 0) {
+                        newTicket = '<div id="rectangle"><sapn class="text-white d-inline-block pt-2">جدید</sapn><div id="triangle-up"></div></div>';
+                    }
+                    outpot +=
+                        `
+                        <tr>
+
+                            <td class="position-relative"><input type="checkbox" name="ids[]" value="${value['id']}">
+                                ${newTicket}
+                            </td>
+                            <td>${value['family']}</td>
+                            <td>${value['email']}</td>
+                            <td>${value['title']}</td>
+                            <td>${value['date']}</td>
+                            <td><img src="../public/images/orderdetailsopen.png" onclick="showDetails(this),updateTicket(this,${value['id']})"></td>
+                            <td>
+                                <a href="adminTickets/deleteTicket/${value['id']}"
+                                   class="btn-small alert alert-danger d-inline-block text-danger m-0">حذف</a>
+                            </td>
+                        </tr>
+                        <tr class="details border">
+                            <td colspan="7">
+                                <div class="position-relative alert alert-info rounded-0 m-0">
+                                    <span class="reply-button position-absolute text-secondary font-md" onclick="answerTicket(this,${value['id']})"><i class="fas fa-reply"></i></span>
+                                    <span>متن تیکت : </span>
+                                    <span>${value['description']}</span>
+                                </div>
+                                ${resOutpot}
+                            </td>
+                        </tr>
+                        `;
+                })
+
+                tableContainer.html(outpot);
+
+                var page_count = data.page_count;
+                last_page = page_count;
+                var outpotPagination = '';
+                outpotPagination = `
+                        <li class="page-item" onclick="loadData(${current_page - 1})">
+                            <a class="page-link" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>`;
+                if (page_count > 5) {
+                    var beforPage = 0;
+                    if (current_page == 1) {
+                        beforPage = 0;
+                    } else if (current_page == 2) {
+                        beforPage = 1;
+                    } else if (current_page == page_count - 1) {
+                        beforPage = 3;
+                    } else if (current_page == page_count) {
+                        beforPage = 4;
+                    } else {
+                        beforPage = 2;
+                    }
+                    for (var i = beforPage; i > 0; i--) {
+                        outpotPagination += `<li class="page-item" onclick="loadData(${current_page - i})"><a class="page-link">${current_page - i}</a></li>`;
+                    }
+                    outpotPagination += `<li class="page-item active"><a class="page-link">${current_page}</a></li>`;
+                    for (var i = 1; i <= 5 - (beforPage + 1); i++) {
+                        outpotPagination += `<li class="page-item" onclick="loadData(${current_page + i})"><a class="page-link">${current_page + i}</a></li>`;
+                    }
+                } else {
+                    for (var i = 1; i <= page_count; i++) {
+                        if (i == current_page) {
+                            outpotPagination += `<li class="page-item active"><a class="page-link">${i}</a></li>`;
+                        } else {
+                            outpotPagination += `<li class="page-item" onclick="loadData(${i})"><a class="page-link">${i}</a></li>`;
+                        }
+                    }
+                }
+                outpotPagination += `
+                            <li class="page-item" onclick="loadData(${current_page + 1})">
+                                <a class="page-link" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>`;
+                paginationContainer.html(outpotPagination);
+            }
+        });
+    }
+
+    function updateTicket(tag, id) {
+        var rectangle = $(tag).parents('tr').find("td #rectangle");
+        $.ajax({
+            url: "adminTickets/updateTicket/" + id,
+            method: "POST",
+            success: function (data) {
+                rectangle.remove();
+            }
+        })
+    }
+
+    function answerTicket(tag, id) {
+        var formAnswer = `
+        <div class="answer-section text-right p-2">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <i class="fas fa-comment-alt font-xl ml-2"></i>ارسال پاسخ
+                </div>
+                <div class="card-body p-3">
+                    <form method="post">
+                        <textarea class="form-control w-100" rows="8" name="answer" placeholder="متن دیدگاه شما..."></textarea>
+                        <input type="hidden" name="parent_id" value="${id}">
+                        <button type="button"  onclick="sendAnswer(this)" class="btn btn-success comment-btn-send float-left mt-4">ارسال دیدگاه</button>
+                    </form>
+                </div>
+            </div>
+        </div>`;
+        var parentTag = $(tag).parent();
+        if (!parentTag.next().hasClass("answer-section")) {
+            parentTag.after(formAnswer).next().slideDown(1000);
+        } else {
+            parentTag.next().slideUp(1000).delay(100).queue(function () {
+                $(this).remove();
+            });
+        }
+    }
+
+    function sendAnswer(tag) {
+        var form = $(tag).parent('form');
+        var answerSection = form.parents(".answer-section");
+        var data = form.serializeArray();
+        console.log(data)
+        $.ajax({
+            url: "adminTickets/answerTicket",
+            method: "POST",
+            data: data,
+            success: function (data) {
+                answerSection.slideUp(1000).delay(500).queue(function () {
+                    $(this).remove();
+                });
+            },
+        })
+    }
+
+    function showEditForm(tag, id) {
+        var responseTag = $(tag).parent().parent().find(".response-text");
+        var responseText = responseTag.attr('data-response');
+        if (!responseTag.has('textarea').length) {
+            var responseText = responseTag.html().trim();
+            responseTag.html('<div class="formEditResponse"><textarea class="form-control w-100 font-sm" rows="6">' + responseText + '</textarea><button type="button" class="btn btn-success d-block mr-auto mt-2 font-sm" onclick="editResponse(this,' + id + ')">ویرایش نظر</button></div>');
+        } else {
+            responseTag.html(responseText);
+        }
+    }
+
+    function editResponse(tag, id) {
+        var formEdit = $(tag).parent("div.formEditResponse");
+        var responseTag = formEdit.parent();
+        var description = formEdit.find("textarea").val();
+        $.ajax({
+            url: "adminTickets/editResponse",
+            method: "POST",
+            data: {"description": description, 'id': id},
+            success: function (data) {
+                responseTag.html(description);
+            },
+        })
+    }
+</script>
+<!-- footer -->
+</div>
+</div>
+</div>
+
+<footer class="container-fluid text-center" id="footer">
+    <div class="row h-100">
+        <div class="col-sm-12 m-auto">
+            <p class="m-0 font-sm">کلیه حقوق سایت متعلق به <a href="https://www.esfeshad.ir">سوغات قائن</a> می باشد.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

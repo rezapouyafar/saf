@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <title>فروشگاه اینترنتی زعفران قائن</title>
+    <!-- Required meta tags -->
+    <base href="./">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="public/images/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="public/css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="public/css/slick.css">
+    <link rel="stylesheet" href="public/css/slick-theme.css">
+    <link rel="stylesheet" href="public/css/flipTimer.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/redesign.css">
+    <link rel="stylesheet" href="public/css/storefront-shell.css">
+    <link rel="stylesheet" href="public/css/styles/panel.css?v=20260912-dashboard">
+    <link rel="stylesheet" href="public/css/styles/panel-addresses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="public/js/jquery.js"></script>
+    <script src="public/js/bootstrap.bundle.js"></script>
+    <script src="public/js/bootstrap.js"></script>
+    <script src="public/js/jquery.bootstrap-show-password.js"></script>
+    <script src="public/js/slick.js"></script>
+    <script src="public/js/jquery.flipTimer.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="public/js/frotel/ostan.js"></script>
+    <script src="public/js/frotel/city.js"></script>
+    <script src="public/js/script.js"></script>
+</head>
+
+<body>
+<!-- HEADER -->
+<header class="site-header storefront-shell-header">
+    <div class="wrap nav-row">
+        <a class="brand" href="index.html">
+            <img class="brand-mark" src="public/images/logo.png" alt="نشان سوغات قاینات">
+            <span>سوغات قاینات</span>
+        </a>
+        <nav class="nav-links" aria-label="ناوبری اصلی">
+            <a href="index.html">صفحه اصلی</a>
+            <a href="products.html">محصولات</a>
+            <a href="index.html#services">خدمات</a>
+            <a href="gallery.html">گالری تصاویر</a>
+            <a href="about.html">درباره ما</a>
+            <a href="contact.html">تماس با ما</a>
+        </nav>
+        <div class="nav-actions">
+            <a class="icon-button auth-link auth-guest" href="loginRegistration.html" aria-label="ورود و ثبت‌نام"><i class="fas fa-right-to-bracket"></i></a>
+            <a class="icon-button auth-link auth-member" href="panel.html" aria-label="حساب کاربری"><i class="fas fa-user-circle"></i></a>
+            <a class="icon-button cart-button" href="showcart.html" aria-label="سبد خرید"><i class="fas fa-shopping-bag"></i><span class="cart-count">۲</span></a>
+        </div>
+    </div>
+</header>
+
+<!-- CONTENT -->
+    <main class="panel-v2">
+        <div class="panel-v2__grid">
+            <aside class="panel-v2__sidebar" aria-label="منوی حساب کاربری">
+                <div class="panel-v2__user">
+                    <div class="panel-v2__avatar"><i class="fas fa-user"></i></div>
+                    <div><strong>علی رضایی</strong><span>حساب کاربری</span></div>
+                </div>
+                <div class="panel-v2__completion">
+                    <div><span>تکمیل پروفایل</span><strong>۸۰٪</strong></div>
+                    <span class="panel-v2__completion-bar"><i></i></span>
+                    <small>با تکمیل اطلاعات، سفارش سریع‌تر انجام می‌شود.</small>
+                </div>
+                <nav class="panel-v2__menu" id="panelTabs" aria-label="بخش‌های حساب کاربری">
+                    <button type="button" class="is-active" data-target="my_tickets" aria-selected="true"><i class="fas fa-ticket-alt"></i><span>تیکت‌های من</span></button>
+                    <button type="button" data-target="my_orders" aria-selected="false"><i class="fas fa-box"></i><span>سفارش‌های من</span></button>
+                    <button type="button" data-target="my_referrals" aria-selected="false"><i class="fas fa-user-plus"></i><span>دعوت دوستان</span></button>
+                    <button type="button" data-target="my_favorites" aria-selected="false"><i class="fas fa-heart"></i><span>علاقه‌مندی‌ها</span></button>
+                    <button type="button" data-target="my_opinion" aria-selected="false"><i class="fas fa-comment"></i><span>نظرات من</span></button>
+                    <button type="button" data-target="my_discountCode" aria-selected="false"><i class="fas fa-tag"></i><span>کدهای تخفیف</span></button>
+                    <button type="button" data-target="my_giftCode" aria-selected="false"><i class="fas fa-gift"></i><span>کارت‌های هدیه</span></button>
+                    <button type="button" data-target="my_info" aria-selected="false"><i class="fas fa-bell"></i><span>اطلاع‌رسانی‌ها</span></button>
+                    <button type="button" data-target="my_profile" aria-selected="false"><i class="fas fa-user-edit"></i><span>پروفایل و تنظیمات</span></button>
+                    <button type="button" data-target="my_addresses" aria-selected="false"><i class="fas fa-location-dot"></i><span>آدرس‌های من</span></button>
+                    <a class="panel-v2__link logout" href="logout"><i class="fas fa-sign-out-alt"></i><span>خروج از حساب</span></a>
+                </nav>
+            </aside>
+            <section class="panel-v2__content">
+                <div class="panel-v2__welcome">
+                    <div>
+                        <h1>سلام علی، خوش آمدید</h1>
+                        <p>مدیریت سفارش‌ها، علاقه‌مندی‌ها و اطلاعات حساب شما از یکجا.</p>
+                    </div>
+                    <span class="badge">حساب فعال</span>
+                </div>
+                <div class="panel-v2__stats">
+                    <article class="panel-v2__stat"><span>کل سفارش‌ها</span><strong>۶</strong></article>
+                    <article class="panel-v2__stat"><span>امتیاز وفاداری</span><strong>۸۴۰</strong></article>
+                    <article class="panel-v2__stat"><span>اعتبار قابل استفاده</span><strong>۲۴۰٬۰۰۰</strong></article>
+                    <article class="panel-v2__stat"><span>تیکت‌های فعال</span><strong>۰</strong></article>
+                </div>
+                <section class="panel-v2__section">
+                    <header class="panel-v2__section-head">
+                        <h2 id="panel-section-title">تیکت‌های من</h2>
+                    </header>
+                    <div class="panel-v2__section-body">
+                        <div class="panel-v2__tabs" id="nav-tabContent">
+                            <div class="panel-v2__tab is-active" id="my_tickets" role="tabpanel">
+                                <div class="ticket-center" id="newTicketPanel">
+                                    <div class="ticket-center__head"><div><span>مرکز پشتیبانی</span><h3>چطور می‌توانیم کمکتان کنیم؟</h3><p>موضوع درخواست را انتخاب کنید تا تیم پشتیبانی سریع‌تر پاسخ بدهد.</p></div><i class="fas fa-headset"></i></div>
+                                    <form class="ticket-center__form" id="newTicketForm"><label><span>موضوع تیکت</span><span class="custom-ticket-select" data-select-name="subject"><button type="button" class="custom-ticket-select__button" aria-haspopup="listbox" aria-expanded="false">انتخاب موضوع<i class="fas fa-chevron-down"></i></button><span class="custom-ticket-select__options" role="listbox"><button type="button" role="option" data-value="پیگیری سفارش">پیگیری سفارش</button><button type="button" role="option" data-value="مشاوره خرید">مشاوره خرید</button><button type="button" role="option" data-value="مشکل پرداخت">مشکل پرداخت</button><button type="button" role="option" data-value="پیشنهاد و انتقاد">پیشنهاد و انتقاد</button></span><input type="hidden" name="subject" required></span></label><label><span>درجه اهمیت</span><span class="custom-ticket-select" data-select-name="priority"><button type="button" class="custom-ticket-select__button" aria-haspopup="listbox" aria-expanded="false">متوسط<i class="fas fa-chevron-down"></i></button><span class="custom-ticket-select__options" role="listbox"><button type="button" role="option" data-value="کم">کم</button><button type="button" role="option" data-value="متوسط">متوسط</button><button type="button" role="option" data-value="مهم">مهم</button><button type="button" role="option" data-value="فوری">فوری</button></span><input type="hidden" name="priority" value="متوسط" required></span></label><label class="ticket-center__field--wide"><span>متن تیکت</span><textarea rows="3" placeholder="متن درخواست خود را دقیق بنویسید..." required></textarea></label><button type="submit"><i class="fas fa-paper-plane"></i> ثبت تیکت جدید</button></form>
+                                </div>
+                                <div class="ticket-list-view" id="ticketListView">
+                                    <div class="ticket-list-heading"><div><span>تیکت‌های قبلی</span><h3>پیگیری درخواست‌های شما</h3></div><span class="ticket-list-count">۲ تیکت</span></div>
+                                    <div class="data-list">
+                                    <button type="button" class="ticket-list-item" data-ticket-open="T-2048"><span class="ticket-list-item__icon"><i class="fas fa-box"></i></span><span class="ticket-list-item__body"><strong>درخواست پیگیری ارسال زعفران قائن</strong><small>پاسخ مدیر: سفارش تا دو روز کاری آینده تحویل می‌شود.</small><span><b>T-2048</b><em>۱۳ مرداد ۱۴۰۳</em></span></span><span class="ticket-list-item__side"><span class="status-badge status-badge--open">در حال بررسی</span><i class="fas fa-chevron-left"></i></span></button>
+                                    <button type="button" class="ticket-list-item" data-ticket-open="T-1987"><span class="ticket-list-item__icon"><i class="fas fa-gift"></i></span><span class="ticket-list-item__body"><strong>سوال درباره بسته‌بندی هدیه</strong><small>پاسخ مدیر: بسته‌بندی هدیه با روبان قابل انتخاب است.</small><span><b>T-1987</b><em>۳۰ تیر ۱۴۰۳</em></span></span><span class="ticket-list-item__side"><span class="status-badge status-badge--reply">پاسخ داده شد</span><i class="fas fa-chevron-left"></i></span></button>
+                                    </div>
+                                </div>
+                                <div class="ticket-conversations" id="ticketConversations" hidden>
+                                    <button type="button" class="master-back-button" id="ticketBackButton"><i class="fas fa-arrow-right"></i> بازگشت به فهرست تیکت‌ها</button>
+                                    <article class="ticket-conversation" data-ticket-id="T-2048" hidden>
+                                        <div class="ticket-conversation__head"><div><span class="ticket-conversation__eyebrow">تیکت T-2048</span><h3>درخواست پیگیری ارسال زعفران قائن</h3></div><span class="status-badge status-badge--open">در حال بررسی</span></div>
+                                        <div class="ticket-chat">
+                                            <div class="ticket-message ticket-message--user"><div class="ticket-message__meta"><strong>شما</strong><span>۱۲ مرداد ۱۴۰۳</span></div><p>سفارش ۱۲۳۴۵۶ با کد رهگیری IR-986400 در حال ارسال است و می‌خواهم وضعیت دقیق تحویل را بدانم.</p></div>
+                                            <div class="ticket-message ticket-message--manager"><div class="ticket-message__meta"><strong><i class="fas fa-headset"></i> پشتیبانی قائنات</strong><span>۱۳ مرداد ۱۴۰۳</span></div><p>سلام، سفارش شما تحویل پست شده و طبق آخرین بررسی، تا دو روز کاری آینده به دستتان می‌رسد.</p></div>
+                                        </div>
+                                        <form class="ticket-reply-form"><label><span>پاسخ شما</span><textarea rows="2" placeholder="پیام خود را بنویسید..." required></textarea></label><button type="submit"><i class="fas fa-paper-plane"></i> ارسال پاسخ</button></form>
+                                    </article>
+                                    <article class="ticket-conversation" data-ticket-id="T-1987" hidden>
+                                        <div class="ticket-conversation__head"><div><span class="ticket-conversation__eyebrow">تیکت T-1987</span><h3>سوال درباره بسته‌بندی هدیه</h3></div><span class="status-badge status-badge--reply">پاسخ داده شد</span></div>
+                                        <div class="ticket-chat">
+                                            <div class="ticket-message ticket-message--user"><div class="ticket-message__meta"><strong>شما</strong><span>۲۹ تیر ۱۴۰۳</span></div><p>آیا امکان ارسال با بسته‌بندی ویژه برای هدیه دادن وجود دارد؟ زمان تحویل در صورت سفارش ویژه چقدر است؟</p></div>
+                                            <div class="ticket-message ticket-message--manager"><div class="ticket-message__meta"><strong><i class="fas fa-headset"></i> پشتیبانی قائنات</strong><span>۳۰ تیر ۱۴۰۳</span></div><p>بله، بسته‌بندی هدیه با روبان و کارت اختصاصی قابل انتخاب است و یک روز به زمان آماده‌سازی اضافه می‌شود.</p></div>
+                                        </div>
+                                        <form class="ticket-reply-form"><label><span>پاسخ شما</span><textarea rows="2" placeholder="پیام خود را بنویسید..." required></textarea></label><button type="submit"><i class="fas fa-paper-plane"></i> ارسال پاسخ</button></form>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="panel-v2__tab" id="my_orders" role="tabpanel" hidden>
+                                <div class="order-list-view" id="orderListView">
+                                <div class="order-list-heading"><div><span>سفارش‌های شما</span><h3>تاریخچه خریدها</h3></div><span class="order-list-count">۳ سفارش</span></div>
+                                <div class="order-status-strip" aria-label="فیلتر وضعیت سفارش‌ها"><span>نمایش سفارش‌ها بر اساس وضعیت</span><button type="button" class="is-active" data-order-filter="all"><i class="fas fa-layer-group"></i> همه <b>۳</b></button><button type="button" data-order-filter="processing"><i class="fas fa-box"></i> آماده‌سازی <b>۱</b></button><button type="button" data-order-filter="sent"><i class="fas fa-truck"></i> ارسال شده <b>۱</b></button><button type="button" data-order-filter="done"><i class="fas fa-check"></i> تحویل شده <b>۱</b></button></div>
+                                <div class="order-card-list">
+                                    <article class="order-summary-card" data-order-status="sent"><div class="order-summary-card__top"><div><span>سفارش #S-2048</span><strong>زعفران نگین + زرشک</strong></div><span class="status-badge status-badge--sent">ارسال شده</span></div><div class="order-summary-products"><div><img src="public/images/products/12/product.jpg" alt="زعفران نگین"><span><b>زعفران نگین</b><small>تعداد: ۱</small></span><strong>۷۸۰٬۰۰۰ تومان</strong></div><div><img src="public/images/gallery/1707725745260933170.jpg" alt="زرشک قائن"><span><b>زرشک پفکی قائن</b><small>تعداد: ۱</small></span><strong>۱٬۶۷۰٬۰۰۰ تومان</strong></div></div><div class="order-summary-card__meta"><span><i class="fas fa-calendar"></i> ۱۴ مرداد ۱۴۰۳</span><span><i class="fas fa-tag"></i> تخفیف: ۱۲۰٬۰۰۰ تومان</span><span><i class="fas fa-wallet"></i> مبلغ نهایی: ۲٬۴۵۰٬۰۰۰ تومان</span><button type="button" class="order-detail-trigger" data-order-toggle="order-2048">مشاهده جزئیات <i class="fas fa-arrow-left"></i></button></div><div class="order-status-line"><i class="is-done"></i><i class="is-done"></i><i class="is-active"></i><i></i></div><div class="order-status-labels"><span>ثبت سفارش</span><span>آماده‌سازی</span><span>ارسال شده</span><span>تحویل</span></div></article>
+                                    <article class="order-summary-card" data-order-status="done"><div class="order-summary-card__top"><div><span>سفارش #S-1897</span><strong>زعفران سرگل + پسته</strong></div><span class="status-badge status-badge--done">تحویل شد</span></div><div class="order-summary-products"><div><img src="public/images/gallery/1707725756193416341.jpg" alt="زعفران سرگل"><span><b>زعفران سرگل</b><small>تعداد: ۱</small></span><strong>۴۲۰٬۰۰۰ تومان</strong></div><div><img src="public/images/products/12/product.jpg" alt="پسته ممتاز"><span><b>پسته ممتاز قائن</b><small>تعداد: ۱</small></span><strong>۱٬۴۴۰٬۰۰۰ تومان</strong></div></div><div class="order-summary-card__meta"><span><i class="fas fa-calendar"></i> ۲۷ تیر ۱۴۰۳</span><span><i class="fas fa-tag"></i> تخفیف: ۰ تومان</span><span><i class="fas fa-wallet"></i> مبلغ نهایی: ۱٬۸۶۰٬۰۰۰ تومان</span><button type="button" class="order-detail-trigger" data-order-toggle="order-1897">مشاهده جزئیات <i class="fas fa-arrow-left"></i></button></div><div class="order-status-line"><i class="is-done"></i><i class="is-done"></i><i class="is-done"></i><i class="is-done"></i></div><div class="order-status-labels"><span>ثبت سفارش</span><span>آماده‌سازی</span><span>ارسال شده</span><span>تحویل</span></div></article>
+                                    <article class="order-summary-card" data-order-status="processing"><div class="order-summary-card__top"><div><span>سفارش #S-1754</span><strong>زعفران درجه یک</strong></div><span class="status-badge status-badge--processing">در حال آماده‌سازی</span></div><div class="order-summary-products"><div><img src="public/images/products/12/product.jpg" alt="زعفران درجه یک"><span><b>زعفران درجه یک</b><small>تعداد: ۱</small></span><strong>۹۸۰٬۰۰۰ تومان</strong></div></div><div class="order-summary-card__meta"><span><i class="fas fa-calendar"></i> ۱۶ خرداد ۱۴۰۳</span><span><i class="fas fa-tag"></i> تخفیف: ۰ تومان</span><span><i class="fas fa-wallet"></i> مبلغ نهایی: ۹۸۰٬۰۰۰ تومان</span><button type="button" class="order-detail-trigger" data-order-toggle="order-1754">مشاهده جزئیات <i class="fas fa-arrow-left"></i></button></div><div class="order-status-line"><i class="is-done"></i><i class="is-active"></i><i></i><i></i></div><div class="order-status-labels"><span>ثبت سفارش</span><span>آماده‌سازی</span><span>ارسال شده</span><span>تحویل</span></div></article>
+                                </div>
+                                </div>
+                                <div class="order-detail-view" id="orderDetailView" hidden>
+                                    <button type="button" class="master-back-button" id="orderBackButton"><i class="fas fa-arrow-right"></i> بازگشت به فهرست سفارش‌ها</button>
+                                <div class="order-details-list">
+                                    <article class="order-detail-card" id="order-2048" hidden>
+                                        <div class="order-detail-card__head"><div><span>سفارش #S-2048</span><strong>در مسیر تحویل</strong></div><button type="button" data-order-close>بستن</button></div>
+                                        <div class="order-detail-card__body"><div class="order-product-list"><div class="order-product"><img src="public/images/products/12/product.jpg" alt="زعفران نگین"><div><strong>زعفران نگین یک مثقالی</strong><span>تعداد: ۱</span></div><b>۷۸۰٬۰۰۰ تومان</b></div><div class="order-product"><img src="public/images/gallery/1707725745260933170.jpg" alt="زرشک قائن"><div><strong>زرشک پفکی قائن</strong><span>تعداد: ۱</span></div><b>۱٬۶۷۰٬۰۰۰ تومان</b></div></div><div class="order-progress"><span class="is-done">ثبت سفارش</span><span class="is-done">آماده‌سازی</span><span class="is-active">ارسال شده</span><span>تحویل</span></div><div class="order-detail-meta"><span>کد رهگیری <strong>IR-986400</strong></span><span>روش ارسال <strong>پست پیشتاز</strong></span><span>آدرس <strong>قائن، خیابان امام</strong></span></div><div class="payment-info"><i class="fas fa-circle-check"></i><span>پرداخت موفق <strong>آنلاین · درگاه زرین‌پال</strong></span><b>۲٬۴۵۰٬۰۰۰ تومان</b></div></div>
+                                    </article>
+                                    <article class="order-detail-card" id="order-1897" hidden>
+                                        <div class="order-detail-card__head"><div><span>سفارش #S-1897</span><strong>تحویل شده</strong></div><button type="button" data-order-close>بستن</button></div>
+                                        <div class="order-detail-card__body"><div class="order-product-list"><div class="order-product"><img src="public/images/gallery/1707725756193416341.jpg" alt="زعفران سرگل"><div><strong>زعفران سرگل نیم مثقالی</strong><span>تعداد: ۱</span></div><b>۴۲۰٬۰۰۰ تومان</b></div><div class="order-product"><img src="public/images/products/12/product.jpg" alt="پسته ممتاز"><div><strong>پسته ممتاز قائن</strong><span>تعداد: ۱</span></div><b>۱٬۴۴۰٬۰۰۰ تومان</b></div></div><div class="order-progress"><span class="is-done">ثبت سفارش</span><span class="is-done">آماده‌سازی</span><span class="is-done">ارسال شده</span><span class="is-done">تحویل</span></div><div class="order-detail-meta"><span>تاریخ تحویل <strong>۳۱ تیر ۱۴۰۳</strong></span><span>روش پرداخت <strong>آنلاین</strong></span></div><div class="payment-info"><i class="fas fa-circle-check"></i><span>پرداخت موفق <strong>آنلاین · درگاه ملت</strong></span><b>۱٬۸۶۰٬۰۰۰ تومان</b></div></div>
+                                    </article>
+                                    <article class="order-detail-card" id="order-1754" hidden>
+                                        <div class="order-detail-card__head"><div><span>سفارش #S-1754</span><strong>در حال آماده‌سازی</strong></div><button type="button" data-order-close>بستن</button></div>
+                                        <div class="order-detail-card__body"><div class="order-product-list"><div class="order-product"><img src="public/images/products/12/product.jpg" alt="زعفران درجه یک"><div><strong>زعفران درجه یک یک مثقالی</strong><span>تعداد: ۱</span></div><b>۹۸۰٬۰۰۰ تومان</b></div></div><div class="order-progress"><span class="is-done">ثبت سفارش</span><span class="is-active">آماده‌سازی</span><span>ارسال شده</span><span>تحویل</span></div><div class="order-detail-meta"><span>تاریخ ثبت <strong>۱۶ خرداد ۱۴۰۳</strong></span><span>روش پرداخت <strong>آنلاین</strong></span></div><div class="payment-info payment-info--pending"><i class="fas fa-clock"></i><span>پرداخت در انتظار تأیید <strong>آنلاین · درگاه ملت</strong></span><b>۹۸۰٬۰۰۰ تومان</b></div></div>
+                                    </article>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="panel-v2__tab" id="my_referrals" role="tabpanel" hidden>
+                                <div class="referral-dashboard">
+                                    <div class="referral-dashboard__hero"><div><span><i class="fas fa-wand-magic-sparkles"></i> باشگاه دوستان قائنات</span><h3>طعم خوب را با دوستانتان قسمت کنید.</h3><p>دوست شما ۵۰٬۰۰۰ تومان اعتبار می‌گیرد و شما برای هر دعوت موفق ۳۰٬۰۰۰ تومان پاداش دریافت می‌کنید.</p></div><div class="referral-dashboard__hero-art"><i class="fas fa-gift"></i><b>+۳۰٬۰۰۰</b></div></div>
+                                    <div class="referral-dashboard__stats"><div><i class="fas fa-user-check"></i><strong>۷</strong><span>دعوت موفق</span></div><div><i class="fas fa-coins"></i><strong>۲۱۰٬۰۰۰</strong><span>پاداش دریافتی</span></div><div><i class="fas fa-hourglass-half"></i><strong>۳</strong><span>در انتظار خرید</span></div></div>
+                                    <div class="referral-dashboard__share"><div><span>لینک دعوت اختصاصی شما</span><strong id="referralLink">qayenat.ir/invite/ali-r</strong></div><button type="button" id="copyReferral"><i class="fas fa-copy"></i><span>کپی لینک دعوت</span></button></div>
+                                    <div class="referral-dashboard__note"><i class="fas fa-circle-info"></i><span>پاداش پس از اولین خرید دوست شما به اعتبار حسابتان اضافه می‌شود.</span><b>۳ از ۱۰ دعوت ماهانه</b></div>
+                                </div>
+                            </div>
+                            <div class="panel-v2__tab" id="my_favorites" role="tabpanel" hidden>
+                                <div class="section-intro section-intro--favorites"><div><span>انتخاب‌های ذخیره‌شده</span><h3>چیزهایی که برای بعد نگه داشته‌اید</h3><p>محصولات محبوبتان را یکجا ببینید و هر زمان آماده بودید به سبد اضافه کنید.</p></div><strong><i class="fas fa-heart"></i> ۲ محصول</strong></div>
+                                <div class="favorites-grid favorites-grid--shelf">
+                                    <article class="favorite-card">
+                                        <img src="public/images/products/12/product.jpg" alt="زعفران نگین">
+                                        <div class="favorite-card__content">
+                                            <h3>زعفران نگین یک مثقالی</h3>
+                                            <div class="rating"><i class="fas fa-star"></i> ۴.۹</div>
+                                            <p>زعفران اصیل قائنات، طعم ماندگار و رنگ طلایی.</p>
+                                                <div class="favorite-card__footer">
+                                                <strong>۷۸۰٬۰۰۰ تومان</strong>
+                                                <button type="button"><i class="fas fa-cart-plus"></i> افزودن به سبد</button>
+                                                <button type="button" class="favorite-remove" aria-label="حذف از علاقه‌مندی"><i class="fas fa-heart-crack"></i></button>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="favorite-card">
+                                        <img src="public/images/gallery/1707725745260933170.jpg" alt="زعفران سرگل">
+                                        <div class="favorite-card__content">
+                                            <h3>زعفران سرگل نیم مثقالی</h3>
+                                            <div class="rating"><i class="fas fa-star"></i> ۴.۸</div>
+                                            <p>بسته‌بندی ویژه هدیه و مناسب برای ارسال رسمی.</p>
+                                                <div class="favorite-card__footer">
+                                                <strong>۴۲۰٬۰۰۰ تومان</strong>
+                                                <button type="button"><i class="fas fa-cart-plus"></i> افزودن به سبد</button>
+                                                <button type="button" class="favorite-remove" aria-label="حذف از علاقه‌مندی"><i class="fas fa-heart-crack"></i></button>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="panel-v2__tab" id="my_opinion" role="tabpanel" hidden>
+                                <div class="opinion-header"><div><span>ردپای تجربه شما</span><h3>نظراتی که ثبت کرده‌اید</h3><p>با انتخاب هر مورد، به صفحه محصول یا مطلبی که برای آن نظر نوشته‌اید بروید.</p></div><strong><i class="fas fa-comment-dots"></i> ۲ نظر</strong></div>
+                                <div class="opinion-grid">
+                                    <a class="opinion-reference opinion-reference--product" href="product-index-1.html"><img src="public/images/products/12/product.jpg" alt="زعفران نگین یک مثقالی"><div class="opinion-reference__content"><span><i class="fas fa-box"></i> نظر درباره محصول</span><h3>زعفران نگین یک مثقالی</h3><div class="opinion-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><b>۴.۹</b></div><p>کیفیت عالی، طعم طبیعی و رایحه بسیار خوب داشت. بسته‌بندی هم بسیار تمیز و شکیل بود.</p><small>مشاهده محصول <i class="fas fa-arrow-left"></i></small></div></a>
+                                    <a class="opinion-reference opinion-reference--blog" href="blog-index-1.html"><img src="public/images/blogs/34/thumb_1707833391.jpg" alt="دستور پخت با زعفران"><div class="opinion-reference__content"><span><i class="fas fa-newspaper"></i> نظر درباره مطلب</span><h3>راز یک پلو زعفرانی خوش‌رنگ</h3><div class="opinion-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><b>۴.۸</b></div><p>دستور کاربردی و توضیحات خوبی داشت؛ مخصوصاً نکته‌های مربوط به دم‌کردن زعفران.</p><small>مشاهده مطلب <i class="fas fa-arrow-left"></i></small></div></a>
+                                </div>
+                            </div>
+                            <div class="panel-v2__tab" id="my_discountCode" role="tabpanel" hidden>
+                                <div class="voucher-overview"><div><span>اعتبارهای ویژه شما</span><strong>۲ کد آماده استفاده</strong></div><i class="fas fa-ticket"></i></div>
+                                <div class="data-list compact-list">
+                                    <article class="coupon-card">
+                                        <div class="coupon-card__top">
+                                            <span class="coupon-tag">تخفیف</span>
+                                            <strong>QAIN10</strong>
+                                        </div>
+                                        <p>۱۰٪ تخفیف برای سفارش‌های بالای ۱٬۰۰۰٬۰۰۰ تومان</p>
+                                        <div class="data-card__meta">
+                                            <span>تا ۳۰ شهریور ۱۴۰۳</span>
+                                            <span>وضعیت: فعال</span>
+                                        </div>
+                                        <button type="button" class="coupon-copy"><i class="fas fa-copy"></i> کپی کد</button>
+                                    </article>
+                                    <article class="coupon-card">
+                                        <div class="coupon-card__top">
+                                            <span class="coupon-tag">هدیه</span>
+                                            <strong>GIFT25</strong>
+                                        </div>
+                                        <p>۲۵٪ تخفیف روی محصولات زعفران و پسته قائن</p>
+                                        <div class="data-card__meta">
+                                            <span>تا ۱۵ مهر ۱۴۰۳</span>
+                                            <span>وضعیت: فعال</span>
+                                        </div>
+                                        <button type="button" class="coupon-copy"><i class="fas fa-copy"></i> کپی کد</button>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="panel-v2__tab" id="my_giftCode" role="tabpanel" hidden>
+                                <div class="gift-wallet"><div><span>موجودی کارت‌های هدیه</span><strong>۱٬۲۵۰٬۰۰۰ <small>تومان</small></strong></div><i class="fas fa-gift"></i></div>
+                                <div class="data-list compact-list">
+                                    <article class="gift-card">
+                                        <div class="gift-card__head">
+                                            <span class="coupon-tag">کارت هدیه</span>
+                                            <strong>GH-2048</strong>
+                                        </div>
+                                        <h3>مبلغ: ۵۰۰٬۰۰۰ تومان</h3>
+                                        <p>کارت هدیه برای خرید محصولات قائن، قابل استفاده در سفارش بعدی</p>
+                                        <div class="data-card__meta">
+                                            <span>اعتبار: ۲۵۰٬۰۰۰ تومان باقیمانده</span>
+                                            <span>منقضی: ۱۴۰۳/۱۲/۲۵</span>
+                                        </div>
+                                    </article>
+                                    <article class="gift-card">
+                                        <div class="gift-card__head">
+                                            <span class="coupon-tag">کارت هدیه</span>
+                                            <strong>GH-1987</strong>
+                                        </div>
+                                        <h3>مبلغ: ۱٬۰۰۰٬۰۰۰ تومان</h3>
+                                        <p>کارت هدیه ویژه مناسبت‌ها، برای خرید روی محصولات خاص قابل استفاده است.</p>
+                                        <div class="data-card__meta">
+                                            <span>اعتبار: ۱٬۰۰۰٬۰۰۰ تومان</span>
+                                            <span>منقضی: ۱۴۰۴/۰۳/۱۰</span>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="panel-v2__tab" id="my_info" role="tabpanel" hidden>
+                                <div class="notice-summary"><div><span>مرکز اطلاع‌رسانی</span><strong>۴ پیام تازه برای شما</strong></div><button type="button"><i class="fas fa-check-double"></i> همه خوانده شد</button></div>
+                                <div class="data-list compact-list">
+                                    <article class="notice-card notice-card--info">
+                                        <div class="notice-card__head">
+                                            <span class="notice-icon"><i class="fas fa-truck-fast"></i></span>
+                                            <strong>اطلاع‌رسانی</strong>
+                                            <span class="meta-date">۱ ساعت پیش</span>
+                                        </div>
+                                        <p>سفارش شما با شماره #S-2048 در فرودگاه تهران در حال ارسال به مقصد نهایی است.</p>
+                                    </article>
+                                    <article class="notice-card notice-card--success">
+                                        <div class="notice-card__head">
+                                            <span class="notice-icon"><i class="fas fa-circle-check"></i></span>
+                                            <strong>موفقیت‌آمیز</strong>
+                                            <span class="meta-date">امروز</span>
+                                        </div>
+                                        <p>پرداخت سفارش #S-2047 با موفقیت انجام شد و سفارش شما برای پردازش ثبت شده است.</p>
+                                    </article>
+                                    <article class="notice-card notice-card--warning">
+                                        <div class="notice-card__head">
+                                            <span class="notice-icon"><i class="fas fa-triangle-exclamation"></i></span>
+                                            <strong>هشدار</strong>
+                                            <span class="meta-date">۲ روز پیش</span>
+                                        </div>
+                                        <p>کد تخفیف QAIN10 تا پایان امروز معتبر است؛ برای استفاده از آن سفارش خود را نهایی کنید.</p>
+                                    </article>
+                                    <article class="notice-card notice-card--danger">
+                                        <div class="notice-card__head">
+                                            <span class="notice-icon"><i class="fas fa-circle-exclamation"></i></span>
+                                            <strong>اخطار</strong>
+                                            <span class="meta-date">۵ روز پیش</span>
+                                        </div>
+                                        <p>پرداخت سفارش #S-2046 تکمیل نشده است. در صورت تمایل، فرایند پرداخت را دوباره انجام دهید.</p>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="panel-v2__tab" id="my_profile" role="tabpanel" hidden>
+                                <div class="profile-dashboard">
+                                    <div class="profile-editor"><div class="profile-editor__head"><div><span>اطلاعات شخصی</span><h3>پروفایل خود را به‌روز کنید</h3></div><i class="fas fa-user-pen"></i></div><form method="post" class="profile-form profile-form--modern"><div class="profile-form__section-title"><i class="fas fa-id-card"></i><span>مشخصات اصلی</span></div><div class="profile-fields"><label><span>نام</span><input type="text" name="first_name" value="علی" placeholder="نام"></label><label><span>نام خانوادگی</span><input type="text" name="last_name" value="رضایی" placeholder="نام خانوادگی"></label><label><span>شماره همراه</span><input type="text" name="mobile" value="۰۹۱۲۰۰۰۰۰۰۰" placeholder="شماره همراه" dir="ltr"></label><label><span>ایمیل <em>قابل تغییر نیست</em></span><input type="email" name="email" value="ali@example.com" disabled dir="ltr"></label></div><div class="form-actions"><button type="submit" class="primary-btn"><i class="fas fa-check"></i> ذخیره تغییرات</button><span><i class="fas fa-clock"></i> آخرین ویرایش: امروز</span></div></form></div>
+                                </div>
+                            </div>
+                            <div class="panel-v2__tab" id="my_addresses" role="tabpanel" hidden>
+                                <div class="addresses-section"><div class="profile-editor__head"><div><span>آدرس‌های من</span><h3>آدرس‌های ثبت‌شده</h3></div><i class="fas fa-location-dot"></i></div><div class="addresses-list"><div class="address-card"><div class="address-card__header"><strong>خانه</strong><span class="address-card__actions"><button type="button" class="address-edit-btn" aria-label="ویرایش آدرس"><i class="fas fa-edit"></i></button><button type="button" class="address-delete-btn" aria-label="حذف آدرس"><i class="fas fa-trash"></i></button></span></div><p>قائن، خیابان امام، پلاک ۱۲</p><small>۰۹۱۲۰۰۰۰۰۰۰</small></div><div class="address-card"><div class="address-card__header"><strong>اداره</strong><span class="address-card__actions"><button type="button" class="address-edit-btn" aria-label="ویرایش آدرس"><i class="fas fa-edit"></i></button><button type="button" class="address-delete-btn" aria-label="حذف آدرس"><i class="fas fa-trash"></i></button></span></div><p>قائن، بلوار فردوسی، پلاک ۴۵، واحد ۳</p><small>۰۹۱۲۱۱۱۱۱۱۱</small></div></div><button type="button" class="primary-btn" id="addAddressBtn"><i class="fas fa-plus"></i> افزودن آدرس جدید</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+    <!-- Address Modal -->
+    <div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="addressModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addressModalLabel">افزودن آدرس جدید</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="بستن"></button>
+                </div>
+                <form id="addressForm" class="address-form">
+                    <div class="modal-body">
+                        <div class="address-form__section"><strong>جزئیات آدرس</strong></div>
+                        <div class="profile-fields">
+                            <label><span>استان</span>
+                                <div class="custom-select" data-select-name="state">
+                                    <button type="button" class="custom-select__button" aria-haspopup="listbox" aria-expanded="false">
+                                        <span>انتخاب استان</span>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <input type="hidden" name="state" required>
+                                    <div class="custom-select__search">
+                                        <input type="text" placeholder="جستجو...">
+                                    </div>
+                                    <div class="custom-select__options" role="listbox">
+                                        <button type="button" role="option" data-value="خراسان جنوبی">خراسان جنوبی</button>
+                                        <button type="button" role="option" data-value="خراسان رضوی">خراسان رضوی</button>
+                                        <button type="button" role="option" data-value="خراسان شمالی">خراسان شمالی</button>
+                                    </div>
+                                </div>
+                            </label>
+                            <label><span>شهر</span>
+                                <div class="custom-select" data-select-name="city">
+                                    <button type="button" class="custom-select__button" aria-haspopup="listbox" aria-expanded="false">
+                                        <span>ابتدا استان را انتخاب کنید</span>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </button>
+                                    <input type="hidden" name="city" required>
+                                    <div class="custom-select__search">
+                                        <input type="text" placeholder="جستجو...">
+                                    </div>
+                                    <div class="custom-select__options" role="listbox"></div>
+                                </div>
+                            </label>
+                            <label class="profile-field--wide"><span>آدرس</span>
+                                <textarea name="address" placeholder="آدرس کامل را وارد کنید" rows="3" required></textarea>
+                            </label>
+                            <label><span>پلاک</span>
+                                <input type="text" name="plate" placeholder="پلاک" required>
+                            </label>
+                            <label><span>واحد</span>
+                                <input type="text" name="unit" placeholder="واحد (اختیاری)">
+                            </label>
+                            <label><span>کد پستی</span>
+                                <input type="text" name="postal_code" placeholder="کد پستی" required dir="ltr">
+                            </label>
+                        </div>
+
+                        <div class="address-form__section"><strong>دریافت کننده</strong></div>
+                        <div class="address-form__radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="recipient_type" value="self" checked onchange="toggleRecipientFields()">
+                                <span>تحویل به خود من</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="recipient_type" value="other" onchange="toggleRecipientFields()">
+                                <span>تحویل به شخص دیگر</span>
+                            </label>
+                        </div>
+                        <div id="otherRecipientFields" class="recipient-fields" hidden>
+                            <div class="profile-fields">
+                                <label><span>نام و نام خانوادگی</span>
+                                    <input type="text" name="recipient_name" placeholder="نام و نام خانوادگی">
+                                </label>
+                                <label><span>شماره موبایل</span>
+                                    <input type="text" name="recipient_mobile" placeholder="شماره موبایل" dir="ltr">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">انصراف</button>
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i> ذخیره آدرس</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const tabButtons = document.querySelectorAll('#panelTabs button[data-target]');
+        const tabPanels = document.querySelectorAll('#nav-tabContent .panel-v2__tab');
+        const title = document.getElementById('panel-section-title');
+
+        const labels = {
+            my_tickets: 'تیکت‌های من',
+            my_orders: 'سفارش‌های من',
+            my_favorites: 'علاقه‌مندی‌ها',
+            my_opinion: 'نظرات من',
+            my_discountCode: 'کدهای تخفیف',
+            my_giftCode: 'کارت‌های هدیه',
+            my_referrals: 'دعوت دوستان',
+            my_info: 'اطلاع‌رسانی‌ها',
+            my_profile: 'پروفایل و تنظیمات',
+            my_addresses: 'آدرس‌های من'
+        };
+
+        tabButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                const target = this.dataset.target;
+
+                tabButtons.forEach(function (item) {
+                    item.classList.remove('is-active');
+                    item.setAttribute('aria-selected', 'false');
+                });
+
+                tabPanels.forEach(function (panel) {
+                    panel.hidden = true;
+                    panel.classList.remove('is-active');
+                });
+
+                this.classList.add('is-active');
+                this.setAttribute('aria-selected', 'true');
+
+                const activePanel = document.getElementById(target);
+                if (activePanel) {
+                    activePanel.hidden = false;
+                    activePanel.classList.add('is-active');
+                }
+
+                if (labels[target]) {
+                    title.textContent = labels[target];
+                }
+            });
+        });
+
+        document.querySelectorAll('[data-order-toggle]').forEach(function (button) {
+            button.addEventListener('click', function () {
+                var detail = document.getElementById(this.dataset.orderToggle);
+                document.querySelectorAll('.order-detail-card').forEach(function (item) { item.hidden = true; });
+                if (detail) {
+                    detail.hidden = false;
+                    document.getElementById('orderListView').hidden = true;
+                    document.getElementById('orderDetailView').hidden = false;
+                }
+            });
+        });
+
+        document.querySelectorAll('[data-order-close]').forEach(function (button) {
+            button.addEventListener('click', function () {
+                document.getElementById('orderDetailView').hidden = true;
+                document.getElementById('orderListView').hidden = false;
+                this.closest('.order-detail-card').hidden = true;
+            });
+        });
+
+        document.getElementById('orderBackButton')?.addEventListener('click', function () {
+            document.querySelectorAll('.order-detail-card').forEach(function (item) { item.hidden = true; });
+            document.getElementById('orderDetailView').hidden = true;
+            document.getElementById('orderListView').hidden = false;
+        });
+
+        document.querySelectorAll('[data-order-filter]').forEach(function (button) {
+            button.addEventListener('click', function () {
+                var filter = this.dataset.orderFilter;
+                document.querySelectorAll('[data-order-filter]').forEach(function (item) { item.classList.remove('is-active'); });
+                this.classList.add('is-active');
+                document.querySelectorAll('.order-summary-card').forEach(function (card) {
+                    card.hidden = filter !== 'all' && card.dataset.orderStatus !== filter;
+                });
+            });
+        });
+
+        document.querySelectorAll('[data-ticket-open]').forEach(function (button) {
+            button.addEventListener('click', function () {
+                document.getElementById('newTicketPanel').hidden = true;
+                document.getElementById('ticketListView').hidden = true;
+                document.getElementById('ticketConversations').hidden = false;
+                document.querySelectorAll('.ticket-conversation').forEach(function (conversation) { conversation.hidden = conversation.dataset.ticketId !== button.dataset.ticketOpen; });
+            });
+        });
+
+        document.getElementById('ticketBackButton')?.addEventListener('click', function () {
+            document.getElementById('newTicketPanel').hidden = false;
+            document.getElementById('ticketConversations').hidden = true;
+            document.getElementById('ticketListView').hidden = false;
+            document.querySelectorAll('.ticket-conversation').forEach(function (conversation) { conversation.hidden = true; });
+        });
+
+        var copyReferral = document.getElementById('copyReferral');
+        if (copyReferral) {
+            copyReferral.addEventListener('click', function () {
+                var link = document.getElementById('referralLink').textContent;
+                var button = this;
+                var done = function () {
+                    button.classList.add('is-copied');
+                    button.querySelector('span').textContent = 'کپی شد';
+                    setTimeout(function () { button.classList.remove('is-copied'); button.querySelector('span').textContent = 'کپی لینک'; }, 1800);
+                };
+                if (navigator.clipboard) navigator.clipboard.writeText(link).then(done);
+                else done();
+            });
+        }
+
+        document.querySelectorAll('.ticket-reply-form').forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                var textarea = form.querySelector('textarea');
+                var message = textarea.value.trim();
+                if (!message) return;
+                var bubble = document.createElement('div');
+                bubble.className = 'ticket-message ticket-message--user';
+                bubble.innerHTML = '<div class="ticket-message__meta"><strong>شما</strong><span>همین حالا</span></div><p></p>';
+                bubble.querySelector('p').textContent = message;
+                form.previousElementSibling.appendChild(bubble);
+                textarea.value = '';
+                form.closest('.ticket-conversation').querySelector('.status-badge').textContent = 'پاسخ جدید شما';
+            });
+        });
+
+        var newTicketForm = document.getElementById('newTicketForm');
+        if (newTicketForm) {
+            newTicketForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                var subject = newTicketForm.querySelector('[name="subject"]').value;
+                var message = newTicketForm.querySelector('textarea').value.trim();
+                if (!subject || !message) return;
+                newTicketForm.reset();
+                newTicketForm.querySelector('[data-select-name="subject"] .custom-ticket-select__button').firstChild.textContent = 'انتخاب موضوع';
+                newTicketForm.querySelector('[data-select-name="priority"] .custom-ticket-select__button').firstChild.textContent = 'متوسط';
+                newTicketForm.querySelector('[name="priority"]').value = 'متوسط';
+                window.alert('تیکت شما با موفقیت ثبت شد.');
+            });
+        }
+
+        document.querySelectorAll('.custom-ticket-select').forEach(function (select) {
+            var trigger = select.querySelector('.custom-ticket-select__button');
+            var hiddenInput = select.querySelector('input[type="hidden"]');
+            trigger.addEventListener('click', function () {
+                var isOpen = select.classList.toggle('is-open');
+                trigger.setAttribute('aria-expanded', String(isOpen));
+            });
+            select.querySelectorAll('[data-value]').forEach(function (option) {
+                option.addEventListener('click', function () {
+                    trigger.firstChild.textContent = this.dataset.value;
+                    hiddenInput.value = this.dataset.value;
+                    select.classList.remove('is-open');
+                    trigger.setAttribute('aria-expanded', 'false');
+                });
+            });
+        });
+
+        document.addEventListener('click', function (event) {
+            document.querySelectorAll('.custom-ticket-select.is-open').forEach(function (select) {
+                if (!select.contains(event.target)) {
+                    select.classList.remove('is-open');
+                    select.querySelector('.custom-ticket-select__button').setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        document.querySelector('.password-form')?.addEventListener('submit', function (event) {
+            var password = this.querySelector('[name="password"]');
+            var confirmation = this.querySelector('[name="password_confirmation"]');
+            if (password.value !== confirmation.value) {
+                event.preventDefault();
+                confirmation.setCustomValidity('رمزهای عبور یکسان نیستند.');
+                confirmation.reportValidity();
+            } else {
+                confirmation.setCustomValidity('');
+            }
+        });
+
+        // Cities data
+        const citiesData = {
+            'خراسان جنوبی': ['قائن', 'بیرجند', 'طبس', 'نهبندان'],
+            'خراسان رضوی': ['مشهد', 'نیشابور', 'سبزوار', 'قوچان'],
+            'خراسان شمالی': ['بجنورد', 'اسفراین', 'شیروان']
+        };
+
+        // Toggle recipient fields
+        function toggleRecipientFields() {
+            const recipientType = document.querySelector('input[name="recipient_type"]:checked').value;
+            const otherRecipientFields = document.getElementById('otherRecipientFields');
+            const requiredFields = otherRecipientFields.querySelectorAll('input');
+            
+            if (recipientType === 'other') {
+                otherRecipientFields.hidden = false;
+                requiredFields.forEach(field => field.required = true);
+            } else {
+                otherRecipientFields.hidden = true;
+                requiredFields.forEach(field => {
+                    field.required = false;
+                    field.value = '';
+                });
+            }
+        }
+
+        // Custom Select Implementation
+        function initCustomSelects() {
+            document.querySelectorAll('.custom-select').forEach(selectContainer => {
+                const button = selectContainer.querySelector('.custom-select__button');
+                const hiddenInput = selectContainer.querySelector('input[type="hidden"]');
+                const options = selectContainer.querySelector('.custom-select__options');
+                const searchInput = selectContainer.querySelector('.custom-select__search input');
+                const selectName = selectContainer.dataset.selectName;
+                
+                // Open/close dropdown
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const isOpen = selectContainer.classList.toggle('is-open');
+                    button.setAttribute('aria-expanded', isOpen);
+                    if (isOpen && searchInput) searchInput.focus();
+                });
+                
+                // Handle option selection
+                options.querySelectorAll('[role="option"]').forEach(option => {
+                    option.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const value = this.dataset.value;
+                        const text = this.textContent;
+                        
+                        button.querySelector('span').textContent = text;
+                        hiddenInput.value = value;
+                        selectContainer.classList.remove('is-open');
+                        button.setAttribute('aria-expanded', 'false');
+                        
+                        // If state changed, update cities
+                        if (selectName === 'state') {
+                            updateCityOptions(value);
+                        }
+                        
+                        // Clear search
+                        if (searchInput) searchInput.value = '';
+                        filterOptions(selectContainer, '');
+                    });
+                });
+                
+                // Search functionality
+                if (searchInput) {
+                    searchInput.addEventListener('input', function() {
+                        filterOptions(selectContainer, this.value);
+                    });
+                }
+                
+                // Close when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!selectContainer.contains(e.target)) {
+                        selectContainer.classList.remove('is-open');
+                        button.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            });
+        }
+
+        // Filter options based on search
+        function filterOptions(selectContainer, searchText) {
+            const options = selectContainer.querySelectorAll('[role="option"]');
+            options.forEach(option => {
+                const text = option.textContent;
+                if (text.includes(searchText)) {
+                    option.style.display = '';
+                } else {
+                    option.style.display = 'none';
+                }
+            });
+        }
+
+        // Update city options based on selected state
+        function updateCityOptions(state) {
+            const citySelect = document.querySelector('.custom-select[data-select-name="city"]');
+            const cityButton = citySelect.querySelector('.custom-select__button span');
+            const cityOptions = citySelect.querySelector('.custom-select__options');
+            const cityHiddenInput = citySelect.querySelector('input[type="hidden"]');
+            
+            cityOptions.innerHTML = '';
+            cityButton.textContent = 'انتخاب شهر';
+            cityHiddenInput.value = '';
+            
+            if (state && citiesData[state]) {
+                citiesData[state].forEach(city => {
+                    const option = document.createElement('button');
+                    option.type = 'button';
+                    option.role = 'option';
+                    option.dataset.value = city;
+                    option.textContent = city;
+                    
+                    option.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        cityButton.textContent = city;
+                        cityHiddenInput.value = city;
+                        citySelect.classList.remove('is-open');
+                        citySelect.querySelector('.custom-select__button').setAttribute('aria-expanded', 'false');
+                        const searchInput = citySelect.querySelector('.custom-select__search input');
+                        if (searchInput) searchInput.value = '';
+                        filterOptions(citySelect, '');
+                    });
+                    
+                    cityOptions.appendChild(option);
+                });
+            }
+        }
+
+        // Handle add address button click
+        document.getElementById('addAddressBtn')?.addEventListener('click', function() {
+            document.getElementById('addressForm').reset();
+            document.querySelector('input[name="recipient_type"][value="self"]').checked = true;
+            document.getElementById('otherRecipientFields').hidden = true;
+            document.getElementById('addressModalLabel').textContent = 'افزودن آدرس جدید';
+            initCustomSelects();
+            const modal = new (window.bootstrap?.Modal || bootstrap.Modal)(document.getElementById('addressModal'));
+            modal.show();
+        });
+
+        // Handle address form submission
+        document.getElementById('addressForm')?.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const state = document.querySelector('input[name="state"]').value;
+            const city = document.querySelector('input[name="city"]').value;
+            const address = document.querySelector('[name="address"]').value;
+            const plate = document.querySelector('[name="plate"]').value;
+            const unit = document.querySelector('[name="unit"]').value;
+            const postalCode = document.querySelector('[name="postal_code"]').value;
+            
+            if (!state || !city || !address || !plate || !postalCode) {
+                alert('لطفاً تمام فیلدهای الزامی را پر کنید');
+                return;
+            }
+            
+            // Create new address card
+            const addressesList = document.querySelector('.addresses-list');
+            const newCard = document.createElement('div');
+            newCard.className = 'address-card';
+            const fullAddress = `${city}, ${address}, پلاک ${plate}${unit ? `, واحد ${unit}` : ''}`;
+            newCard.innerHTML = `
+                <div class="address-card__header">
+                    <strong>آدرس جدید</strong>
+                    <span class="address-card__actions">
+                        <button type="button" class="address-edit-btn" aria-label="ویرایش آدرس"><i class="fas fa-edit"></i></button>
+                        <button type="button" class="address-delete-btn" aria-label="حذف آدرس"><i class="fas fa-trash"></i></button>
+                    </span>
+                </div>
+                <p>${fullAddress}</p>
+                <small>${postalCode}</small>
+            `;
+            
+            // Add delete functionality
+            newCard.querySelector('.address-delete-btn').addEventListener('click', function() {
+                if (confirm('آیا می‌خواهید این آدرس را حذف کنید؟')) {
+                    newCard.remove();
+                }
+            });
+
+            // Add edit functionality
+            newCard.querySelector('.address-edit-btn').addEventListener('click', function() {
+                document.querySelector('input[name="state"]').value = state;
+                updateCityOptions(state);
+                document.querySelector('input[name="city"]').value = city;
+                document.querySelector('[name="address"]').value = address;
+                document.querySelector('[name="plate"]').value = plate;
+                document.querySelector('[name="unit"]').value = unit;
+                document.querySelector('[name="postal_code"]').value = postalCode;
+                document.getElementById('addressModalLabel').textContent = 'ویرایش آدرس';
+                const modal = new (window.bootstrap?.Modal || bootstrap.Modal)(document.getElementById('addressModal'));
+                modal.show();
+            });
+            
+            addressesList.appendChild(newCard);
+            
+            // Close modal
+            const modal = (window.bootstrap?.Modal || bootstrap.Modal).getInstance(document.getElementById('addressModal'));
+            if (modal) modal.hide();
+            
+            alert('آدرس با موفقیت ثبت شد');
+        });
+
+        // Add delete functionality to existing addresses
+        document.querySelectorAll('.address-delete-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                if (confirm('آیا می‌خواهید این آدرس را حذف کنید؟')) {
+                    this.closest('.address-card').remove();
+                }
+            });
+        });
+
+        // Add edit functionality to existing addresses
+        document.querySelectorAll('.address-edit-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const card = this.closest('.address-card');
+                const addressText = card.querySelector('p').textContent;
+                document.getElementById('addressModalLabel').textContent = 'ویرایش آدرس';
+                initCustomSelects();
+                const modal = new (window.bootstrap?.Modal || bootstrap.Modal)(document.getElementById('addressModal'));
+                modal.show();
+            });
+        });
+    </script>
+
+<!-- FOOTER -->
+<footer class="storefront-shell-footer">
+    <div class="storefront-shell-inner">
+        <div class="storefront-shell-trust">
+            <div><i class="fas fa-shield-alt"></i><span><strong>خرید مطمئن</strong><small>تضمین اصالت محصولات</small></span></div>
+            <div><i class="fas fa-truck-fast"></i><span><strong>ارسال سریع</strong><small>بسته‌بندی امن تا درب خانه</small></span></div>
+            <div><i class="fas fa-headset"></i><span><strong>پشتیبانی واقعی</strong><small>همراه شما در تمام مسیر خرید</small></span></div>
+        </div>
+        <div class="storefront-shell-footer-main">
+            <div class="storefront-shell-footer-brand">
+                <img src="public/images/logo.png" alt="نشان سوغات قاینات">
+                <h2>سوغات قاینات</h2>
+                <p>انتخاب اصیل زعفران و سوغات خراسان جنوبی، مستقیم از دل مزارع قائنات.</p>
+                <div class="storefront-shell-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3>دسترسی سریع</h3>
+                <a href="index.html">صفحه اصلی</a>
+                <a href="products.html">محصولات</a>
+                <a href="gallery.html">گالری تصاویر</a>
+                <a href="about.html">درباره ما</a>
+            </div>
+            <div>
+                <h3>راهنمای خرید</h3>
+                <a href="transport.html">روش‌های ارسال</a>
+                <a href="showcart.html">سبد خرید</a>
+                <a href="contact.html">پشتیبانی</a>
+                <a href="review.html">نظرات مشتریان</a>
+            </div>
+            <div>
+                <h3>با ما در تماس باشید</h3>
+                <p>۰۵۶-۳۲۲۲۲۲۲۲</p>
+                <p>info@example.com</p>
+                <p>هر روز، ۲۴ ساعته</p>
+            </div>
+        </div>
+        <div class="storefront-shell-footer-bottom">© تمامی حقوق برای سوغات قاینات محفوظ است.</div>
+    </div>
+</footer>
+
+</body>
+
+</html>

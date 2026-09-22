@@ -1,0 +1,241 @@
+/* ORDER STEPS */
+.order-steps {
+    min-height: 150px;
+    background-color: #f6f6f6;
+}
+
+.order-steps .dashed span {
+    display: inline-block;
+    background-color: #31a9e3;
+    width: 11px;
+    height: 3px;
+}
+
+
+.order-steps ul li {
+    display: block;
+    position: relative;
+    width: 150px;
+}
+
+.order-steps ul li:last-child {
+    width: 20px;
+    margin-left: -10px;
+}
+
+.order-steps ul li:last-child .title {
+    width: 100px;
+}
+
+.order-steps ul li .circle {
+    position: absolute;
+    display: inline-block;
+    border: 3px solid #ccc;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    top: -1px;
+    right: -27px;
+}
+
+.order-steps ul li .title {
+    position: absolute;
+    font-size: 13px;
+    color: #aaa !important;
+    top: 25px;
+    right: -48px;
+}
+
+.order-steps ul li .line {
+    position: absolute !important;
+    display: inline-block !important;
+    background-color: #ccc; !important;
+    width: 110px !important;
+    height: 2px !important;
+    top: 8px !important;
+    right: 0 !important;
+}
+
+.order-steps ul li.active .circle {
+    border-color: #31a9e3;
+    background: #31a9e3 url("../images/slices.png") no-repeat -812px -477px !important;
+}
+
+.order-steps ul li.active .line {
+    background-color: #31a9e3 !important;
+}
+
+.order-steps ul li.active .title {
+    color: #31a9e3 !important;
+}
+
+/* CARD */
+
+/* card 1 */
+/*.select_list {*/
+/*    cursor: pointer;*/
+/*    width: auto;*/
+/*    height: 37px;*/
+/*    border: 1px solid #ccc;*/
+/*    background: #eee;*/
+/*}*/
+
+/*.select_list p {*/
+/*    font-size: 13px;*/
+/*    font-weight: 600;*/
+/*    color: #333;*/
+/*}*/
+
+/*.select_list span {*/
+/*    font-size: 18px;*/
+/*    margin-top: 5px;*/
+/*}*/
+
+/*.select_list ul {*/
+/*    display: none;*/
+/*    z-index: 999;*/
+/*    background: #fff;*/
+/*    right: -1px;*/
+/*    left: -2px;*/
+/*    top: 38px;*/
+/*    border: 1px solid #ccc;*/
+/*}*/
+
+/*.select_list ul li {*/
+/*    cursor: pointer;*/
+/*    font-size: 13px;*/
+/*    padding: 5px 15px;*/
+/*}*/
+
+
+.product-count {
+    user-select: none;
+}
+
+.plus, .minus {
+    cursor: pointer;
+}
+
+
+#final_price {
+    max-width: 600px;
+    width: 100%;
+}
+
+#address_alert {
+    display: none;
+}
+
+.cart_container .table .circle {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.cart_container .table .product_geter {
+    font-size: 16px;
+}
+
+.cart_container .table .edit_remove {
+    height: 177px;
+}
+
+.cart_container .table .edit_remove .edit, .cart_container .table .edit_remove .remove {
+    cursor: pointer;
+}
+
+.cart_container .table .edit_remove .edit i, .cart_container .table .edit_remove .remove i {
+    width: 14px;
+    height: 14px;
+    display: block;
+    background: url("../../images/slices.png") no-repeat;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.cart_container .table .edit_remove .edit i {
+    background-position: -812px -446px;
+}
+
+.cart_container .table .edit_remove .remove i {
+    background-position: -813px -510px;
+}
+
+
+.cart_container .table.active {
+    border: 2px solid #66bf66 !important;
+}
+
+.cart_container .table.active .first {
+    background: #bff3bf;
+}
+
+.cart_container .table.active .circle {
+    position: relative;
+    background: #27c427;
+    border: none;
+}
+
+.cart_container .table.active .circle::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.cart_container .content .table.active .triangle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 40px 40px 0;
+    border-color: transparent #66bf66 transparent transparent;
+}
+
+.cart_container .content .table.active .triangle::after {
+    position: absolute;
+    content: "\2713";
+    top: 3px;
+    left: 23px;
+    font-size: 17px;
+    color: #fff;
+}
+
+.read-input {
+    top: 9px;
+    left: 140px;
+    z-index: 9;
+    cursor: pointer;
+    display: none;
+}
+
+.discount-amount {
+    display: none;
+}
+/* ---------- Minimal/modern overrides ---------- */
+.order-steps { background-color: var(--bg); border-radius: var(--radius); }
+.order-steps .dashed span { background-color: var(--accent); }
+.order-steps ul li .circle { border-color: var(--line-strong); background: var(--paper); }
+.order-steps ul li .title { color: var(--muted) !important; }
+.order-steps ul li .line { background-color: var(--line-strong) !important; }
+.order-steps ul li.active .circle { border-color: var(--accent); background: var(--accent) url("../images/slices.png") no-repeat -812px -477px !important; }
+.order-steps ul li.active .line { background-color: var(--accent) !important; }
+.order-steps ul li.active .title { color: var(--accent-ink) !important; }
+
+.cart_container .table { border-radius: var(--radius); overflow: hidden; }
+.cart_container .table.active { border: 1px solid var(--accent) !important; box-shadow: var(--shadow-sm); }
+.cart_container .table.active .first { background: var(--accent-soft); }
+.cart_container .table.active .circle { background: var(--accent); }
+.cart_container .content .table.active .triangle { border-color: transparent var(--accent) transparent transparent; }
