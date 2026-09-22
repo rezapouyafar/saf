@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>فروشگاه زعفران و زرشک | سوغات قائنات</title>
     <!-- Required meta tags -->
     <base href="./">
@@ -8,7 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/x-icon" href="public/images/favicon.png">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="public/css/bootstrap-rtl.css">
     <link rel="stylesheet" href="public/css/slick.css">
     <link rel="stylesheet" href="public/css/slick-theme.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,7 +119,7 @@
                     </li>
                 </ul>
                 <div class="catalog-pagination"><span class="active">۱</span><span>۲</span><span>۳</span><span><i class="fas fa-chevron-left"></i></span></div>
-                <div id="pagination" class="d-none">
+                <div id="pagination" class="hidden">
                     <span onclick="getProduct(current_page-1)" class="prev ml-1">صفحه قبل</span>
                     <ul class="p-0 m-0"></ul>
                     <span onclick="getProduct(current_page+1)" class="next mr-1">صفحه بعد</span>
@@ -170,26 +170,26 @@
                     var price_total = parseInt(value['price_total']).toLocaleString();
                     outpot +=
                         `
-                        <li class="col-12 col-md-4 col-lg-3 p-1">
-                            <a href="product/index/${value['id']}" class="d-block w-100">
-                                <div class="card justify-content-between w-100 h-100">
+                        <li class="w-full md:w-1/3 lg:w-1/4 p-1">
+                            <a href="product/index/${value['id']}" class="block w-full">
+                                <div class="card justify-between w-full h-full">
                                     <div class="right">
                                         <img class="card-img-top mb-2" src="public/images/products/${value['id']}/thumb_product.jpg"
                                              alt="Card image cap">
                                         <div class="card-body1 p-2">
-                                            <div class="stars position-relative">
-                                                <span class="score font-sm font-weight-bold position-absolute">${value['point']} از 5</span>
-                                                <div class="gray position-relative mr-auto">
-                                                    <div class="red position-absolute" style="width: ${value['pointPercent']}%"></div>
+                                            <div class="stars relative">
+                                                <span class="score font-sm font-bold absolute">${value['point']} از 5</span>
+                                                <div class="gray relative mr-auto">
+                                                    <div class="red absolute" style="width: ${value['pointPercent']}%"></div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="left pb-2">
-                                        <div class="card-body2 p-2 h-100 d-flex flex-column">
-                                            <p class="title font-weight-bold text-right mt-3">${value['title']}</p>
+                                        <div class="card-body2 p-2 h-full flex flex-column">
+                                            <p class="title font-bold text-right mt-3">${value['title']}</p>
                                             <div class="description">${value['introduction']}</div>
-                                            <div class="price_shop_product d-flex justify-content-between align-items-center mt-auto">
+                                            <div class="price_shop_product flex justify-between items-center mt-auto">
                                                 <div class="price_product">
                                                     <p class="price_red p-0 mb-2">${price} تومان</p>
                                                     <p class="price_green p-0 m-0">${price_total} تومان</p>
